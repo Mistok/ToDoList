@@ -1,0 +1,16 @@
+
+.content_container{
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0;
+}
+.content_calendar{
+    flex-basis: 24%;
+    border: 1px solid pink;
+    margin-right: 1%;
+
+}
+.content_tasks{
+    flex-basis: 75% ;
+    border: 1px solid #ffffff;
+}

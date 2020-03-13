@@ -1,0 +1,36 @@
+
+
+
+header{
+    background-color: #e8583d;
+    padding: 24px 0;
+}
+.header_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+}
+.search_field{
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    width: 225px;
+    font-size: 16px;
+    padding: 4px 36px 4px 14px;
+    letter-spacing: 1px;
+    margin-right: 30px;
+    background: #fff url(./assets/searchIcon.png) no-repeat right 5px center;
+    color: #424344;
+}
+.profile_ava{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
