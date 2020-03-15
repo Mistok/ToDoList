@@ -1,9 +1,10 @@
 import React from 'react'
-
+import {style} from './task.module.css'
+console.log(`style: ${style}`);
 class Task extends React.Component{
     render(){
         return(
-            <div className="task_container">
+            <div className="style.task_container">
                <div className="task_header">
                    <div className='task_header_left'>
                        <img src="../../../../../assets/task_ava.png" alt="Avatar" className="task_photo"/>
