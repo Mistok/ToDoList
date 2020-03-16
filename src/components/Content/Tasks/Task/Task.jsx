@@ -1,10 +1,12 @@
 import React from 'react'
-import {style} from './task.module.css'
+import {style} from './task.module.scss'
+
 console.log(`style: ${style}`);
+
 class Task extends React.Component{
     render(){
         return(
-            <div className="style.task_container">
+            <div className='task_container'>
                <div className="task_header">
                    <div className='task_header_left'>
                        <img src="../../../../../assets/task_ava.png" alt="Avatar" className="task_photo"/>
@@ -15,9 +17,9 @@ class Task extends React.Component{
                    </div>
                </div>
                 <div className="task_features_bar">
-                    <div className="task_feature_item"><i className="fa"></i><span>6:00am</span></div>
-                    <div className="task_feature_item"><i className="fa"></i><span>Central Park, NYC</span></div>
-                    <div className="task_feature_item"><i className="fa"></i><span>Every Friday</span></div>
+                    <div className="task_feature_item"><i className="fa"/><span>6:00am</span></div>
+                    <div className="task_feature_item"><i className="fa"/><span>Central Park, NYC</span></div>
+                    <div className="task_feature_item"><i className="fa"/><span>Every Friday</span></div>
                 </div>
                 <div className="task_description">
                     <h1 className="task_description_title">Training - Excercises</h1>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Calendar from "./Calendar/Calendar.jsx";
 import Tasks from "./Tasks/Tasks.jsx";
+import {style} from './content.module.scss';
 
 class Content extends React.Component{
     render(){

@@ -1,10 +1,11 @@
 import React from 'react'
+import {style} from './navigation.scss'
 
 class Nav extends React.Component{
     render(){
         return(
             <nav>
-                <div className='container '>
+                <div className='container'>
                     <div className="nav_wrapper">
                         <div className="nav_panel">
                             <a href='#' title='nav-link' className="nav_item">
@@ -20,7 +21,9 @@ class Nav extends React.Component{
                                 <span className="nav_item_count">2 </span>
                             </a>
                         </div>
-                        <button className="new_task_btn">Create new task</button>
+                        <div className='dvs'>
+                            <a href="#" className='new_task_btn'>New task</a>
+                        </div>
                     </div>
 
                 </div>

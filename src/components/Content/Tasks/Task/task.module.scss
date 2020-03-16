@@ -1,5 +1,7 @@
+@import "../../../../Static/variables.scss";
+
 .task_container{
-    background-color: #fff;
+    background-color: $white;
     padding: 30px;
     margin-bottom: 10px;
     box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
@@ -45,11 +47,11 @@
 
 .task_description_title{
     font-size: 19px;
-    color: #424344;
+    color: $textColor;
 }
 .task_description_text{
     font-size: 14px;
-    color: #787b7e;
+    color: $greyText;
 }
 
 .task_friends{
