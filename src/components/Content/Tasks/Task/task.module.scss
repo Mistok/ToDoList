@@ -4,7 +4,7 @@
     background-color: $white;
     padding: 30px;
     margin-bottom: 10px;
-    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.75);
 }
 .task_header{
     display: flex;
@@ -15,12 +15,12 @@
 .task_header_left{
     display: inline-flex;
     align-items: center;
-
 }
 .task_photo{
     border-radius: 50%;
     margin-right: 15px;
 }
+
 .task_header_text{
     line-height: 50px;
     font-size: 15px;
@@ -40,6 +40,21 @@
 .task_feature_item{
     margin-right: 15px;
 }
+.task_feature_icon{
+    margin-right: 10px;
+    &.map{
+        color: $green;
+    }
+    &.time{
+        color: $red;
+    }
+    &.calendar{
+        color: $blue;
+    }
+}
+.task_feature_icon-time{
+    color: $red;
+}
 .task_description{
     padding-left: 65px;
     margin-bottom: 20px;
@@ -56,7 +71,6 @@
 
 .task_friends{
     padding-left: 65px;
-
 }
 .task_friends img{
     border-radius: 50%;

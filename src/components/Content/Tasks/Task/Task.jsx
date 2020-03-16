@@ -1,5 +1,7 @@
 import React from 'react'
 import {style} from './task.module.scss'
+import { faClock, faMapMarkedAlt, faCalendar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 console.log(`style: ${style}`);
 
@@ -17,9 +19,9 @@ class Task extends React.Component{
                    </div>
                </div>
                 <div className="task_features_bar">
-                    <div className="task_feature_item"><i className="fa"/><span>6:00am</span></div>
-                    <div className="task_feature_item"><i className="fa"/><span>Central Park, NYC</span></div>
-                    <div className="task_feature_item"><i className="fa"/><span>Every Friday</span></div>
+                    <div className="task_feature_item"><FontAwesomeIcon className='task_feature_icon time' icon={faClock} /><span>6:00am</span></div>
+                    <div className="task_feature_item"><FontAwesomeIcon className='task_feature_icon map' icon={faMapMarkedAlt} /><span>Central Park, NYC</span></div>
+                    <div className="task_feature_item"><FontAwesomeIcon className='task_feature_icon calendar' icon={faCalendar} /><span>Every Friday</span></div>
                 </div>
                 <div className="task_description">
                     <h1 className="task_description_title">Training - Excercises</h1>

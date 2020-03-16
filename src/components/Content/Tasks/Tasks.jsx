@@ -9,6 +9,7 @@ class Tasks extends React.Component{
                     <Task/>
                     <Task/>
                     <Task/>
+
             </div>
 
         )
