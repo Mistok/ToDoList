@@ -1,5 +1,8 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const env = process.env.NODE_ENV || 'development';
+const isDev = env === 'development';
 module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, './site'),
@@ -10,7 +13,7 @@ module.exports = {
         path: path.resolve(__dirname, 'site'),
         filename: 'bundle.js'
     },
-    devtool: 'eval-source-map',
+    devtool: isDev && 'eval-source-map',
     mode: 'development',
     watch: true,
     module: {
@@ -49,5 +52,10 @@ module.exports = {
                 }
             },
         ]
-    }
+    },
+    plugins: [
+        new CopyWebpackPlugin([
+            { from: path.resolve('./dev/static'), to: path.resolve('.site') }
+        ]),
+    ],
 };
