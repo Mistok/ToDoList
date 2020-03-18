@@ -28,16 +28,16 @@ class Task extends React.Component{
                     <p className="task_description_text">Trining with some friends at Central Park New York City, taking 1 hour and 30 minutes to do it all kind of exercises.</p>
                 </div>
                 <div className="task_friends">
-                    <a href="" className="task_friend_link">
+                    <a href="#" className="task_friend_link">
                         <img src="../../../../../assets/friend_1.png" alt="friend_ava" className="task_friend_link_img"/>
                     </a>
-                    <a href="" className="task_friend_link">
+                    <a href="#" className="task_friend_link">
                         <img src="../../../../../assets/friend_2.png" alt="friend_ava" className="task_friend_link_img"/>
                     </a>
-                    <a href="" className="task_friend_link">
+                    <a href="#" className="task_friend_link">
                         <img src="../../../../../assets/friend_3.png" alt="friend_ava" className="task_friend_link_img"/>
                     </a>
-                    <a href="" className="task_friend_link">
+                    <a href="#" className="task_friend_link">
                         <img src="../../../../../assets/friend_4.png" alt="friend_ava" className="task_friend_link_img"/>
                     </a>
                 </div>

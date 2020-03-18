@@ -6,7 +6,6 @@ import {style} from './content.module.scss';
 const styles = {
     position: 'relative',
     margin: '50px auto'
-
 };
 
 class Content extends React.Component{
@@ -17,10 +16,12 @@ class Content extends React.Component{
                 <div className="container">
                     <div className='content_container'>
                         <div className="content_calendar">
-                            <Calendar style={styles} wdth='302px'/>
+                            <Calendar style={styles} width='420px' />
                         </div>
 
-                        <div className='content_tasks'><Tasks /></div>
+                        <div className='content_tasks'>
+                            <Tasks />
+                        </div>
                     </div>
                 </div>
             </div>
