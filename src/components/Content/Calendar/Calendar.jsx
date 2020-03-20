@@ -239,17 +239,17 @@ class Calendar extends React.Component{
 
                <div className="calendar_container">
 
-                       <table className="calendar-wrapper">
+                       <div className="calendar-wrapper">
 
                            <div className="calendar_header">
 
                                <FontAwesomeIcon className='calendar_month_left' icon={faChevronLeft} onClick={(e)=> {this.prevMonth()}}/>
 
-                               <td colSpan="5">
+                               <div>
                                    <this.MonthNav />
                                    {" "}
                                    <this.YearNav />
-                               </td>
+                               </div>
 
                                <FontAwesomeIcon className='calendar_month_right' icon={faChevronRight} onClick={(e)=> {this.nextMonth()}}/>
 
@@ -261,7 +261,7 @@ class Calendar extends React.Component{
                                </div>
                                 {trElems}
                            </div>
-                       </table>
+                       </div>
                    </div>
 
             </div>

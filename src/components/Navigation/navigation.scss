@@ -43,18 +43,7 @@ nav{
     text-align: center;
     border-radius: 50%;
 }
-/*
-.new_task_btn{
-    padding: 15px 30px;
-    color: $greyBg;
-    background-color: #67c50c;
-    border-radius: 5px;
-    border: none;
-    box-shadow: none;
-    white-space: nowrap;
-    cursor: pointer;
-}
-*/
+
 .new_task_btn{
     border: 3px solid $textColor;
     font-size: 16px;
@@ -94,4 +83,66 @@ nav{
 .new_task_btn:after{
     opacity: 1;
     transition-delay: .1s;
+}
+
+.add_task_form{
+    padding: 15px;
+    input, textarea, select{
+        padding: 5px;
+        border: none;
+        border-radius: 2px;
+        background-color: $greyBg;
+        color: $textColor;
+
+    }
+    label{
+        letter-spacing: 1px;
+    }
+}
+.add_title{
+    width: 100%;
+    padding: 5px;
+    display: block;
+    input{
+        margin-left: 10px;
+        width: 100%;
+        padding: 5px;
+    }
+}
+.add_devider{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.add_left_col{
+    flex-grow: 2;
+    label{
+        display: block;
+        padding: 10px;
+        margin-bottom: 10px;
+        span{
+            margin-right: 10px;
+        }
+    }
+}
+.add_right_col{
+
+    label{
+        span{
+            display: block;
+            padding: 10px;
+        }
+    }
+    textarea{
+        width: 100%;
+        height: 75px;
+        resize: none;
+    }
+    flex-grow: 8;
+    .add_friend_select_label{
+
+        display: inline-block;
+
+    }
 }

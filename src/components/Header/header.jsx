@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {Style} from './header.scss';
-console.log(Style);
+//console.log(Style);
 class Header extends React.Component {
 
 

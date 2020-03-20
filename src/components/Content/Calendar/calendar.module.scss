@@ -40,7 +40,7 @@
   .calendar_month_right, .calendar_month_left{
     transform: translateY(20%);
   }
-  
+
 
   .day {
     font-size: 0.8em;
@@ -49,10 +49,12 @@
     justify-content: center;
     cursor: pointer;
     line-height: 24px;
-    padding: 5px;
     &:after{
       background-color: transparent;
       transition: 0.2s;
+    }
+    span{
+      padding: 5px;
     }
   }
 

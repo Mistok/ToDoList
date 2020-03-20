@@ -56,6 +56,14 @@
 .task_feature_icon-time{
     color: $red;
 }
+.task_feature_map{
+    text-decoration: none;
+    color: inherit;
+    transition: .2s;
+    &:hover{
+        color: $green;
+    }
+}
 .task_description{
     padding-left: 65px;
     margin-bottom: 20px;
