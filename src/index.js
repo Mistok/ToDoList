@@ -1,9 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import addNewTask from './Static/state'
 import App from './components/App';
 
-ReactDOM.render(
-	<App />,
-	document.getElementById('app')
-);
+let newTask = {
+    id: '5',
+    author: 'Roger Briges',
+    date: 'something',
+    time: 'something',
+    title: 'something',
+    location: {
+        locationTitle: 'something',
+        map: '#'
+    },
+
+    text: 'something',
+    friends: [{
+        name: '',
+        avatar: ''
+    },]
+};
+
+addNewTask(newTask);
+
+export let rerenderEntireTree =() => {
+
+    ReactDOM.render(
+        <App />,
+        document.getElementById('app')
+    );
+};
+
+rerenderEntireTree();

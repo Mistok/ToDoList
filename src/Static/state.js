@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../index";
+
 let state = {
     tasks: [
         {
@@ -119,5 +121,12 @@ let state = {
         }
     ]
 };
+
+export let addNewTask = (newTask) =>{
+    console.log(newTask);
+    state.tasks.push(newTask);
+    rerenderEntireTree(state);
+};
+
 
 export default state;
