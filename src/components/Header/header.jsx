@@ -13,7 +13,7 @@ class Header extends React.Component {
                             <img className='logo' src="../../../assets/logo.png" alt="Logo"/>
                         </div>
                         <div className='menu'>
-                            <input className='search_field'  type="text" />
+                            <input className='search_field'  type="text" onClick={console}/>
                             <img className='profile_ava'  src="../../../assets/ava.png" alt="ava"/>
                         </div>
                     </div>

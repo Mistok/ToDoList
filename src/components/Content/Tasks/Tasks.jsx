@@ -135,7 +135,6 @@ class Tasks extends React.Component{
 
                 { state.tasks.map( task => (<Task task = {task} key = {task.id}/>) ) }
 
-
             </div>
 
         )

@@ -1,5 +1,8 @@
 @import "../../Static/variables.scss";
 
+.content_wrapper{
+    transition: .3s;
+}
 .content_container{
     display: flex;
     flex-direction: row;
