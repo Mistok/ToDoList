@@ -21,8 +21,6 @@ let newTask = {
     },]
 };
 
-addNewTask(newTask);
-
 export let rerenderEntireTree =() => {
 
     ReactDOM.render(
