@@ -1,6 +1,10 @@
 import React from 'react'
 import {style} from './newTask.scss'
-import addNewTask from '../../Static/state.js'
+
+import { slideInDown } from 'react-animations';
+
+import styled, { keyframes } from 'styled-components';
+const SlideInDown = styled.div`animation: .8s ${keyframes`${slideInDown}`} `;
 
 class NewTask extends React.Component{
     constructor(){
@@ -26,8 +30,36 @@ class NewTask extends React.Component{
             }
         }
     }
+    handleChange = () => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    };
+    createNewTask = (event) => {
+        event.preventDefault();
+        let newTask = {
+            id: newTaskTitle.current.value,
+            author: 'Roger Briges',
+            date: newTaskDate.current.value,
+            time: newTaskTime.current.value,
+            title: newTaskTitle.current.value,
+            location: {
+                locationTitle: newTaskPlace.current.value,
+                map: '#'
+            },
 
-    add
+            text: newTaskText.current.value,
+            friends: [{
+                name: '',
+                avatar: ''
+            },]
+        };
+        debugger;
+        console.dir(newTask);
+        console.log(this.props)
+        this.props.addNewTask(newTask);
+
+    };
 
     render(){
         let newTaskTitle = React.createRef();
@@ -55,15 +87,15 @@ class NewTask extends React.Component{
                     avatar: ''
                 },]
             };
-            debugger;
-            console.dir(newTask);
-            addNewTask(newTask);
+
+            this.props.addNewTask(newTask);
 
         };
 
         return(
+            <SlideInDown>
             <div className="formContainer">
-                <form className='add_task_form' action="#">
+                <form onSubmit={createNewTask} className='add_task_form' action="#">
                     <label htmlFor="add_title" className='add_title'>
                         <span>Task title</span>
                         <input id='add_title' type="text" ref={newTaskTitle} required/>
@@ -101,11 +133,12 @@ class NewTask extends React.Component{
                                     <option value="dinesh">Dinesh</option>
                                 </select>
                             </label>
-                            <input onClick={createNewTask} className='add_submit_btn' htmlFor="add_task_form" type="submit" value='Add task'/>
+                            <input onSubmit={createNewTask} className='add_submit_btn' htmlFor="add_task_form" type="submit" value='Add task'/>
                         </div>
                     </div>
                 </form>
             </div>
+            </SlideInDown>
         )
     }
 }

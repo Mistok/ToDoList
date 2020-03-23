@@ -17,14 +17,12 @@ class Nav extends React.Component{
     };
     render(){
         const {formShown} = this.state;
-
-
         return(
             <nav>
                 <div className='container'>
                     <div className="nav_wrapper">
                         <div className="nav_panel">
-                            <a href='#' title='nav-link' className="nav_item">
+                           <a href='#' title='nav-link' className="nav_item">
                                 <span className="nav_item_name"> Today</span>
                                 <span className="nav_item_count">3</span>
                             </a>
@@ -41,11 +39,9 @@ class Nav extends React.Component{
                             <a href="#" className='new_task_btn' onClick={this.newTaskToggler}>New task</a>
                         </div>
                     </div>
-                    {formShown ? <NewTask />  : null}
-
+                                            {formShown ? <NewTask addNewTask={this.props.addNewTask}/> : null}
 
                 </div>
-
             </nav>
         )
     }
