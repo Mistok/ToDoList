@@ -1,25 +1,53 @@
 import React from 'react'
 import {style} from './task.module.scss'
-import { faClock, faMapMarkedAlt, faCalendar } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faMapMarkedAlt, faCalendar, faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { keyframes } from 'styled-components';
 import { fadeInUp } from 'react-animations';
+import NewTask from "../../../NewTask/NewTask.jsx";
 
 const FadeInUp = styled.div`animation: 2s ${keyframes`${fadeInUp}`} `;
 
 class Task extends React.Component{
+
+    state = {
+        isEdit: false,
+    };
+
+    editTask = (id) => {
+        const {isEdit} = this.state;
+
+        this.setState({
+            isEdit: !isEdit,
+        });
+        console.log(this.state);
+    };
     render(){
+
         const {id, author, date, time, title, location, text, friends} = this.props.task;
+        const {removeTask} = this.props;
+        const {isEdit} = this.state;
+        const remove = (id, e) =>{
+            removeTask(id, e);
+        };
             return(
+
             <FadeInUp>
+
                 <div className='task_container' data_id={id}>
+                    {
+                        isEdit ? (
+                            <NewTask/>
+                        ) : (
+                    <>
                    <div className="task_header">
                        <div className='task_header_left'>
                            <img src="../../../../../assets/task_ava.png" alt="Avatar" className="task_photo"/>
                            <span className='task_header_text'>{author}</span>
                        </div>
                        <div className="task_header_right">
-                           <a href="#">X Delete</a>
+                           <a onClick={this.editTask} href="#" className='task_delete_icon'><FontAwesomeIcon icon={faEdit}/></a>
+                           <a onClick={(e)=> {remove(id, e)}} href="#"><FontAwesomeIcon icon={faTrashAlt}/></a>
                        </div>
                    </div>
 
@@ -55,7 +83,8 @@ class Task extends React.Component{
                             <img src="../../../../../assets/friend_4.png" alt="friend_ava" className="task_friend_link_img"/>
                         </a>
                     </div>
-
+                    </>
+                    )}
                 </div>
             </FadeInUp>
         )

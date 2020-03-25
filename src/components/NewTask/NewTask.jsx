@@ -9,137 +9,121 @@ const SlideInDown = styled.div`animation: .8s ${keyframes`${slideInDown}`} `;
 class NewTask extends React.Component{
     constructor(){
         super();
-
         this.state = {
-            newTask: {
-                id: '',
-                author: '',
-                date: ':',
-                time: '',
-                title: '',
-                location: {
-                    locationTitle: 'somewhere in Kiev',
-                    map: '#'
-                },
-
-                text: '',
-                friends: [{
-                    name: '',
-                    avatar: ''
-                },]
-            }
-        }
-    }
-    handleChange = () => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    };
-    createNewTask = (event) => {
-        event.preventDefault();
-        let newTask = {
-            id: newTaskTitle.current.value,
-            author: 'Roger Briges',
-            date: newTaskDate.current.value,
-            time: newTaskTime.current.value,
-            title: newTaskTitle.current.value,
+            id: '',
+            author: 'Roger Bridges',
+            date: ':',
+            time: '',
+            title: '',
             location: {
-                locationTitle: newTaskPlace.current.value,
+                locationTitle: 'somewhere in Kiev',
                 map: '#'
             },
-
-            text: newTaskText.current.value,
+            text: '',
             friends: [{
                 name: '',
                 avatar: ''
             },]
-        };
-        debugger;
-        console.dir(newTask);
-        console.log(this.props)
-        this.props.addNewTask(newTask);
+        }
+    }
+    clearForm = () => {
 
+        this.setState(this.state = {
+            id: '',
+            author: 'Roger Bridges',
+            date: ':',
+            time: '',
+            title: '',
+            location: {
+                locationTitle: 'somewhere in Kiev',
+                map: '#'
+            },
+            text: '',
+            friends: [{
+                name: '',
+                avatar: ''
+            },]
+
+        })
+    };
+
+    handleSubmit = (e) =>{
+        e.preventDefault();
+        let {author, date, time, title, location, text, friends} = this.state;
+
+        let newTask = {
+            id: Date.now(),
+            author,
+            date,
+            time,
+            title,
+            location,
+            text,
+            friends,
+        };
+        this.props.addNewTask(newTask);
+        this.clearForm()
+
+    };
+    onChangeHandle = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
     };
 
     render(){
-        let newTaskTitle = React.createRef();
-        let newTaskDate = React.createRef();
-        let newTaskTime = React.createRef();
-        let newTaskPlace = React.createRef();
-        let newTaskText = React.createRef();
 
-        let createNewTask = (event) => {
-            event.preventDefault();
-            let newTask = {
-                id: newTaskTitle.current.value,
-                author: 'Roger Briges',
-                date: newTaskDate.current.value,
-                time: newTaskTime.current.value,
-                title: newTaskTitle.current.value,
-                location: {
-                    locationTitle: newTaskPlace.current.value,
-                    map: '#'
-                },
-
-                text: newTaskText.current.value,
-                friends: [{
-                    name: '',
-                    avatar: ''
-                },]
-            };
-
-            this.props.addNewTask(newTask);
-
-        };
+        const {id, author, location, date, time, title, text} = this.state;
 
         return(
             <SlideInDown>
-            <div className="formContainer">
-                <form onSubmit={createNewTask} className='add_task_form' action="#">
-                    <label htmlFor="add_title" className='add_title'>
-                        <span>Task title</span>
-                        <input id='add_title' type="text" ref={newTaskTitle} required/>
-                    </label>
-                    <div className="add_devider">
-                        <div className="add_left_col">
-                            <label htmlFor="add_data">
-                                <span>Add date</span>
-                                <input id='add_data' type="date" ref={newTaskDate} required/>
-                            </label>
-                            <label htmlFor="add_time">
-                                <span>Add time</span>
-                                <input id='add_time' type="time" ref={newTaskTime} required/>
-                            </label>
-                            <label htmlFor="add_location">
-                                <span>Add place</span>
-                                <input id='add_location' ref={newTaskPlace} type="text" />
-                            </label>
+                <div className="formContainer">
+                    <form onSubmit={this.handleSubmit} className='add_task_form' action="#">
+                        <label htmlFor="add_title" className='add_title'>
+                            <span>Task title</span>
+                            <input onChange={this.onChangeHandle} id='add_title' name="title" type="text"  value={title} required/>
+                        </label>
+                        <div className="add_devider">
+                            <div className="add_left_col">
+                                <label htmlFor="add_data">
+                                    <span>Add date</span>
+                                    <input onChange={this.onChangeHandle} id="add_data" name="date" type="date"  value={date} required/>
+                                </label>
+                                <label htmlFor="add_time">
+                                    <span>Add time</span>
+                                    <input onChange={this.onChangeHandle} id="add_time" type="time" name='time' value={time} required/>
+                                </label>
+                                <label htmlFor="add_location">
+                                    <span>Add place</span>
+                                    <input onChange={this.onChangeHandle} id='add_location' name='location' value={location.locationTitle} type="text" />
+                                </label>
+                            </div>
+                            <div className="add_right_col">
+                                <label htmlFor="add_text">
+                                    <span>Add task description</span>
+                                    <textarea onChange={this.onChangeHandle} placeholder='task description here' name='text' value={text} />
+                                </label>
+                                <label htmlFor="add_friend_select" >
+                                    <span className='add_friend_select_label'>Add friends</span>
+                                    <select name="add_friend_select" id="add_friend_select" >
+                                        <option value="" selected='selected'>none</option>
+                                        <option value="sara">Sara</option>
+                                        <option value="david">David</option>
+                                        <option value="eddie">Eddie</option>
+                                        <option value="john">John</option>
+                                        <option value="alice">Alice</option>
+                                        <option value="roger">Roger</option>
+                                        <option value="dinesh">Dinesh</option>
+                                    </select>
+                                </label>
+                                <input onSubmit={this.handleSubmit} className='add_submit_btn' htmlFor="add_task_form" type="submit" value='Add task'/>
+                            </div>
                         </div>
-                        <div className="add_right_col">
-                            <label htmlFor="add_text">
-                                <span>Add task description</span>
-                                <textarea placeholder='task description here' ref={newTaskText}/>
-                            </label>
-                            <label htmlFor="add_friend_select" >
-                                <span className='add_friend_select_label'>Add friends</span>
-                                <select name="add_friend_select" id="add_friend_select" >
-                                    <option value="" selected='selected'>none</option>
-                                    <option value="sara">Sara</option>
-                                    <option value="david">David</option>
-                                    <option value="eddie">Eddie</option>
-                                    <option value="john">John</option>
-                                    <option value="alice">Alice</option>
-                                    <option value="roger">Roger</option>
-                                    <option value="dinesh">Dinesh</option>
-                                </select>
-                            </label>
-                            <input onSubmit={createNewTask} className='add_submit_btn' htmlFor="add_task_form" type="submit" value='Add task'/>
-                        </div>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
             </SlideInDown>
         )
     }
 }
 export default NewTask;
+

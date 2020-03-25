@@ -13,7 +13,6 @@ class Nav extends React.Component{
         event.preventDefault();
         const {formShown} = this.state;
         this.setState({formShown: !formShown});
-
     };
     render(){
         const {formShown} = this.state;
@@ -32,15 +31,14 @@ class Nav extends React.Component{
                             </a>
                             <a href='#' title='nav-link' className="nav_item">
                                 <span className="nav_item_name">New checking</span>
-                                <span className="nav_item_count">2 </span>
+                                <span className="nav_item_count">2</span>
                             </a>
                         </div>
                         <div className='dvs'>
                             <a href="#" className='new_task_btn' onClick={this.newTaskToggler}>New task</a>
                         </div>
                     </div>
-                                            {formShown ? <NewTask addNewTask={this.props.addNewTask}/> : null}
-
+                        {formShown ? <NewTask addNewTask={this.props.addNewTask} /> : null}
                 </div>
             </nav>
         )

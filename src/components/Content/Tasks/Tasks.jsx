@@ -5,7 +5,7 @@ import { fadeOutDown } from 'react-animations';
 
 
 
-const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`}  infiniti`;
+const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`} `;
 
 class Tasks extends React.Component{
 
@@ -16,11 +16,13 @@ class Tasks extends React.Component{
         }
     }
     render(){
+        const {tasks, removeTask} = this.props;
+
         return(
             <div className="content_wrapper">
 
                <FadeOutDown>
-                   { this.props.tasks.map( task => (<Task task = {task} key = {task.id}/>) ) }
+                   { tasks.map( task => (<Task task = {task} key = {task.id} removeTask={removeTask}/>) ) }
                </FadeOutDown>
             </div>
 

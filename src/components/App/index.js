@@ -3,10 +3,8 @@ import React from 'react';
 import Header from "../Header/header.jsx";
 import Nav from "../Navigation/navigation.jsx";
 import Content from "../Content/Content.jsx";
-import {rerenderEntireTree} from "../../index";
 
-let store = {
-    tasks: [
+ let tasks = [
         {
             id: 1,
             author: 'Roger Bridges',
@@ -124,27 +122,43 @@ let store = {
 
             ]
         }
-    ]
-};
+    ];
 
-let addNewTask = (newTask) =>{
-    store.tasks.unshift(newTask);
-    rerenderEntireTree();
-};
-let deleteTask = (id) =>{
-	this.store.tasks = this.store.tasks.filter(task => task.id !== id);
-	rerenderEntireTree();
-};
+
 class App extends React.Component {
+    state = {
+      tasksList:  tasks
+    };
+
+    addNewTask = (newTask) => {
+        const {tasksList} = this.state;
+
+        this.setState ({
+            tasksList: [newTask, ...tasksList]
+        });
+        console.log(tasksList);
+    };
+
+    deleteTask = (taskId, e) => {
+        e.preventDefault();
+        const {tasksList} = this.state;
+
+        this.setState ({
+            tasksList: tasksList.filter(item => item.id !== taskId),
+        });
+        console.log(taskId);
+    };
 	render() {
 
-		return (
-			<>
-				<Header/>
-	            <Nav addNewTask={addNewTask}/>
-				<Content tasks={store.tasks}/>
-			</>
-		)
+        let {tasksList} = this.state;
+
+        return (
+            <>
+                <Header/>
+                <Nav addNewTask={this.addNewTask}/>
+                <Content tasks={tasksList} removeTask={this.deleteTask}/>
+            </>
+        );
 	}
 }
 
