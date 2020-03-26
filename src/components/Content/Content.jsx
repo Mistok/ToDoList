@@ -20,7 +20,11 @@ class Content extends React.Component{
                         </div>
 
                         <div className='content_tasks'>
-                            <Tasks tasks={this.props.tasks} removeTask={this.props.removeTask} />
+                            <Tasks
+                                tasks = { this.props.tasks }
+                                removeTask = { this.props.removeTask }
+                                tasksEditTask = { this.props.contentEditTask }
+                            />
                         </div>
                     </div>
                 </div>

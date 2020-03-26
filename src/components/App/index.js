@@ -136,7 +136,7 @@ class App extends React.Component {
         this.setState ({
             tasksList: [newTask, ...tasksList]
         });
-        console.log(tasksList);
+
     };
 
     deleteTask = (taskId, e) => {
@@ -146,7 +146,11 @@ class App extends React.Component {
         this.setState ({
             tasksList: tasksList.filter(item => item.id !== taskId),
         });
-        console.log(taskId);
+
+    };
+
+    updateTask = (task) => {
+        console.log('update',task)
     };
 	render() {
 
@@ -156,7 +160,11 @@ class App extends React.Component {
             <>
                 <Header/>
                 <Nav addNewTask={this.addNewTask}/>
-                <Content tasks={tasksList} removeTask={this.deleteTask}/>
+                <Content
+                    tasks={ tasksList }
+                    removeTask= { this.deleteTask }
+                    contentEditTask = { this.updateTask }
+                />
             </>
         );
 	}

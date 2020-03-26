@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4002bb4-fa91-4fda-b57b-eb5d511f94fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Tasks/Task/task.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Tasks/Task/task.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" afterDir="false" />
@@ -38,7 +36,7 @@
           <entry key="html" value="4" />
           <entry key="js" value="19" />
           <entry key="json" value="3" />
-          <entry key="jsx" value="38" />
+          <entry key="jsx" value="41" />
           <entry key="scss" value="14" />
           <entry key="ts" value="1" />
         </counts>
@@ -48,7 +46,7 @@
           <entry key="CSS" value="31" />
           <entry key="HTML" value="4" />
           <entry key="JSON" value="3" />
-          <entry key="JSX Harmony" value="38" />
+          <entry key="JSX Harmony" value="41" />
           <entry key="JavaScript" value="19" />
           <entry key="SCSS" value="14" />
           <entry key="TypeScript" value="1" />
@@ -58,9 +56,9 @@
         <counts>
           <entry key="css" value="1504" />
           <entry key="html" value="43" />
-          <entry key="js" value="1694" />
+          <entry key="js" value="1779" />
           <entry key="json" value="148" />
-          <entry key="jsx" value="8917" />
+          <entry key="jsx" value="9689" />
           <entry key="scss" value="2107" />
         </counts>
       </usages-collector>
@@ -69,8 +67,8 @@
           <entry key="CSS" value="1504" />
           <entry key="HTML" value="43" />
           <entry key="JSON" value="148" />
-          <entry key="JSX Harmony" value="8917" />
-          <entry key="JavaScript" value="1694" />
+          <entry key="JSX Harmony" value="9689" />
+          <entry key="JavaScript" value="1779" />
           <entry key="SCSS" value="2107" />
         </counts>
       </usages-collector>
@@ -81,8 +79,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="142">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Navigation/navigation.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="800">
+              <caret line="40" column="90" selection-start-line="40" selection-start-column="90" selection-end-line="40" selection-end-column="90" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -93,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/App/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="136" column="46" lean-forward="true" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="46" />
+            <state relative-caret-position="600">
+              <caret line="151" column="28" selection-start-line="151" selection-start-column="28" selection-end-line="151" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#229#3775#0" />
@@ -103,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Navigation/navigation.jsx">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            <state relative-caret-position="266">
+              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -116,19 +126,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Content/Tasks/Task/task.module.scss">
+        <entry file="file://$PROJECT_DIR$/src/components/Content/Content.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+            <state relative-caret-position="202">
+              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+            <state relative-caret-position="182">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -182,13 +195,13 @@
         <option value="$PROJECT_DIR$/src/components/NewTask/newTask.scss" />
         <option value="$PROJECT_DIR$/src/Static/state.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Content/Tasks/Task/task.module.scss" />
         <option value="$PROJECT_DIR$/src/components/Content/Content.jsx" />
         <option value="$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx" />
         <option value="$PROJECT_DIR$/src/components/App/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Content/Tasks/Task/task.module.scss" />
-        <option value="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" />
         <option value="$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" />
+        <option value="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" />
       </list>
     </option>
   </component>
@@ -342,12 +355,12 @@
       <updated>1583955579766</updated>
       <workItem from="1583955582054" duration="3141000" />
       <workItem from="1584053993282" duration="63582000" />
-      <workItem from="1584651752504" duration="68405000" />
+      <workItem from="1584651752504" duration="76732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135128000" />
+    <option name="totallyTimeSpent" value="143455000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,7 +375,7 @@
     <frame x="-5" y="0" width="1378" height="775" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17985074" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17985074" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -375,8 +388,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32854864" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23300971" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074625" side_tool="true" weight="0.23300971" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49925372" visible="true" weight="0.23300971" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -534,61 +547,10 @@
         <state relative-caret-position="-2220" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Content/Content.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="16926" column="12" selection-start-line="16926" selection-start-column="12" selection-end-line="16926" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="136" column="46" lean-forward="true" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#229#3775#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/navigation.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,10 +561,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/navigation.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="40" column="90" selection-start-line="40" selection-start-column="90" selection-end-line="40" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="151" column="28" selection-start-line="151" selection-start-column="28" selection-end-line="151" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#229#3775#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        <state relative-caret-position="182">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Content/Content.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

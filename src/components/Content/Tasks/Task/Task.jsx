@@ -14,18 +14,19 @@ class Task extends React.Component{
         isEdit: false,
     };
 
-    editTask = (id) => {
-        const {isEdit} = this.state;
+    handleChange = (e) => {
+        e.preventDefault();
 
         this.setState({
-            isEdit: !isEdit,
-        });
-        console.log(this.state);
+            isEdit: !this.isEdit,
+        })
     };
+
     render(){
 
         const {id, author, date, time, title, location, text, friends} = this.props.task;
-        const {removeTask} = this.props;
+
+        const {removeTask, editTask} = this.props;
         const {isEdit} = this.state;
         const remove = (id, e) =>{
             removeTask(id, e);
@@ -37,7 +38,10 @@ class Task extends React.Component{
                 <div className='task_container' data_id={id}>
                     {
                         isEdit ? (
-                            <NewTask/>
+                            <NewTask
+                                task = {{id, author, date, time, title, location, text, friends }}
+                                editTask = {editTask}
+                            />
                         ) : (
                     <>
                    <div className="task_header">
@@ -46,7 +50,7 @@ class Task extends React.Component{
                            <span className='task_header_text'>{author}</span>
                        </div>
                        <div className="task_header_right">
-                           <a onClick={this.editTask} href="#" className='task_delete_icon'><FontAwesomeIcon icon={faEdit}/></a>
+                           <a onClick={(e)=> {this.handleChange(e)}} href="#" className='task_delete_icon'><FontAwesomeIcon icon={faEdit}/></a>
                            <a onClick={(e)=> {remove(id, e)}} href="#"><FontAwesomeIcon icon={faTrashAlt}/></a>
                        </div>
                    </div>

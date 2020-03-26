@@ -38,7 +38,7 @@ class Nav extends React.Component{
                             <a href="#" className='new_task_btn' onClick={this.newTaskToggler}>New task</a>
                         </div>
                     </div>
-                        {formShown ? <NewTask addNewTask={this.props.addNewTask} /> : null}
+                        {formShown ? <NewTask addNewTask={this.props.addNewTask} task = {''}/> : null}
                 </div>
             </nav>
         )

@@ -7,19 +7,21 @@ import styled, { keyframes } from 'styled-components';
 const SlideInDown = styled.div`animation: .8s ${keyframes`${slideInDown}`} `;
 
 class NewTask extends React.Component{
+
     constructor(){
         super();
+        debugger
         this.state = {
-            id: '',
+            id: this.props.task.id ? this.props.task.id : '',
             author: 'Roger Bridges',
-            date: ':',
-            time: '',
-            title: '',
+            date: /*this.props.task.date ? this.props.task.date :*/ '',
+            time: /*this.props.task.time ? this.props.task.time :*/'',
+            title: /*this.props.task.title ? this.props.task.title :*/ '',
             location: {
-                locationTitle: 'somewhere in Kiev',
+                locationTitle: /*this.props.task.location.locationTitle ? this.props.task.location.locationTitle :*/ '',
                 map: '#'
             },
-            text: '',
+            text:/* this.props.task.text ? this.props.task.text : */'',
             friends: [{
                 name: '',
                 avatar: ''
@@ -49,6 +51,7 @@ class NewTask extends React.Component{
 
     handleSubmit = (e) =>{
         e.preventDefault();
+
         let {author, date, time, title, location, text, friends} = this.state;
 
         let newTask = {
@@ -66,6 +69,7 @@ class NewTask extends React.Component{
 
     };
     onChangeHandle = (e) => {
+        console.log(this.props)
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -106,7 +110,7 @@ class NewTask extends React.Component{
                                 <label htmlFor="add_friend_select" >
                                     <span className='add_friend_select_label'>Add friends</span>
                                     <select name="add_friend_select" id="add_friend_select" >
-                                        <option value="" selected='selected'>none</option>
+                                        <option value="" defaultValue='selected'>none</option>
                                         <option value="sara">Sara</option>
                                         <option value="david">David</option>
                                         <option value="eddie">Eddie</option>

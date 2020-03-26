@@ -16,13 +16,13 @@ class Tasks extends React.Component{
         }
     }
     render(){
-        const {tasks, removeTask} = this.props;
+        const {tasks, removeTask, tasksEditTask} = this.props;
 
         return(
             <div className="content_wrapper">
 
                <FadeOutDown>
-                   { tasks.map( task => (<Task task = {task} key = {task.id} removeTask={removeTask}/>) ) }
+                   { tasks.map( task => (<Task task = {task} key = {task.id} removeTask = {removeTask} editTask = {tasksEditTask}/>) ) }
                </FadeOutDown>
             </div>
 
