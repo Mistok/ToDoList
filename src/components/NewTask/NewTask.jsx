@@ -10,9 +10,10 @@ class NewTask extends React.Component{
 
     constructor(){
         super();
-        debugger
+        debugger;
+        console.log(this.props);  // на стадии инициализации this.props = undefined
         this.state = {
-            id: this.props.task.id ? this.props.task.id : '',
+            id: /*this.props.task.id ? this.props.task.id : */'',
             author: 'Roger Bridges',
             date: /*this.props.task.date ? this.props.task.date :*/ '',
             time: /*this.props.task.time ? this.props.task.time :*/'',

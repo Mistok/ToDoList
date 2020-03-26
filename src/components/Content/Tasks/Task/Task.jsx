@@ -25,7 +25,6 @@ class Task extends React.Component{
     render(){
 
         const {id, author, date, time, title, location, text, friends} = this.props.task;
-
         const {removeTask, editTask} = this.props;
         const {isEdit} = this.state;
         const remove = (id, e) =>{
@@ -40,7 +39,7 @@ class Task extends React.Component{
                         isEdit ? (
                             <NewTask
                                 task = {{id, author, date, time, title, location, text, friends }}
-                                editTask = {editTask}
+                                addNewTask = {editTask}
                             />
                         ) : (
                     <>
