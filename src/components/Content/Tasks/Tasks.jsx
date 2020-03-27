@@ -9,12 +9,10 @@ const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`} `;
 
 class Tasks extends React.Component{
 
-    constructor(){
-        super();
-        this.state  = {
-            showForm: false
-        }
-    }
+    state  = {
+        showForm: false
+    };
+
     render(){
         const {tasks, removeTask, tasksEditTask} = this.props;
 

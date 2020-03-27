@@ -8,27 +8,25 @@ const SlideInDown = styled.div`animation: .8s ${keyframes`${slideInDown}`} `;
 
 class NewTask extends React.Component{
 
-    constructor(){
-        super();
-        debugger;
-        console.log(this.props);  // на стадии инициализации this.props = undefined
-        this.state = {
-            id: /*this.props.task.id ? this.props.task.id : */'',
+
+
+        state = {
+            id: this.props.task.id ? this.props.task.id : '',
             author: 'Roger Bridges',
-            date: /*this.props.task.date ? this.props.task.date :*/ '',
-            time: /*this.props.task.time ? this.props.task.time :*/'',
-            title: /*this.props.task.title ? this.props.task.title :*/ '',
+            date: this.props.task.date ? this.props.task.date : '',
+            time: this.props.task.time ? this.props.task.time :'',
+            title: this.props.task.title ? this.props.task.title : '',
             location: {
-                locationTitle: /*this.props.task.location.locationTitle ? this.props.task.location.locationTitle :*/ '',
+                locationTitle: this.props.task.locationTitle ? this.props.task.locationTitle : '',
                 map: '#'
             },
-            text:/* this.props.task.text ? this.props.task.text : */'',
+            text: this.props.task.text ? this.props.task.text : '',
             friends: [{
                 name: '',
                 avatar: ''
             },]
-        }
-    }
+        };
+
     clearForm = () => {
 
         this.setState(this.state = {
@@ -70,7 +68,7 @@ class NewTask extends React.Component{
 
     };
     onChangeHandle = (e) => {
-        console.log(this.props)
+        console.log(this.props);
         this.setState({
             [e.target.name]: e.target.value
         })
