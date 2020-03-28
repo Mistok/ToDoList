@@ -8,6 +8,7 @@ class Nav extends React.Component{
         this.state = {
             formShown: true,
         }
+
     }
     newTaskToggler = (event) => {
         event.preventDefault();

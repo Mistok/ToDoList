@@ -7,7 +7,7 @@ import styled, { keyframes } from 'styled-components';
 const SlideInDown = styled.div`animation: .8s ${keyframes`${slideInDown}`} `;
 
 class NewTask extends React.Component{
-    
+
     state = {
         id: this.props.task.id ? this.props.task.id : '',
         author: 'Roger Bridges',
@@ -61,12 +61,12 @@ class NewTask extends React.Component{
             text,
             friends,
         };
-        this.props.addNewTask(newTask);
+        this.props.addNewTask(newTask, e);
         this.clearForm()
 
     };
     onChangeHandle = (e) => {
-        console.log(this.props);
+
         this.setState({
             [e.target.name]: e.target.value
         })

@@ -9,7 +9,7 @@ import Content from "../Content/Content.jsx";
             id: 1,
             author: 'Roger Bridges',
             date: '',
-            time: '6:00',
+            time: '06:00',
             title: 'Training - Excercises',
             location: {
                 locationTitle: 'Sport Life',
@@ -136,7 +136,6 @@ class App extends React.Component {
         this.setState ({
             tasksList: [newTask, ...tasksList]
         });
-
     };
 
     deleteTask = (taskId, e) => {
@@ -146,11 +145,10 @@ class App extends React.Component {
         this.setState ({
             tasksList: tasksList.filter(item => item.id !== taskId),
         });
-
     };
 
     updateTask = (editedTask) => {
-        console.log('update',editedTask);
+
         const {tasksList} = this.state;
 
         this.setState({

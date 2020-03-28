@@ -15,20 +15,28 @@ class Task extends React.Component{
     };
 
     handleChange = (e) => {
+        const {isEdit} = this.state;
         e.preventDefault();
 
         this.setState({
-            isEdit: !this.isEdit,
+            isEdit: !isEdit,
         })
+    };
+
+    updateTask = (newTask, e) => {
+        this.handleChange(e);
+        this.props.editTask(newTask)
     };
 
     render(){
 
         const {id, author, date, time, title, location, text, friends} = this.props.task;
+        const locationTitle = this.props.task.location.locationTitle;
         const {removeTask, editTask} = this.props;
         const {isEdit} = this.state;
         const remove = (id, e) =>{
             removeTask(id, e);
+            console.log(location)
         };
             return(
 
@@ -38,8 +46,8 @@ class Task extends React.Component{
                     {
                         isEdit ? (
                             <NewTask
-                                task = {{id, author, date, time, title, location, text, friends }}
-                                addNewTask = {editTask}
+                                task = {{id, author, date, time, title, locationTitle, text, friends }}
+                                addNewTask = {this.updateTask}
                             />
                         ) : (
                     <>
