@@ -16,7 +16,7 @@ import Content from "../Content/Content.jsx";
                 map: 'https://goo.gl/maps/aUgCZZFgGQg8iCEq6'
             },
 
-            text: 'Leg day is the hardest day of the weak. And don`t forget to do some crunches 3/30',
+            text: 'Legs day is the hardest day of the weak. And don`t forget to do some crunches 3/30',
             friends: [
                 {
                     name: 'David',
@@ -47,7 +47,7 @@ import Content from "../Content/Content.jsx";
                 locationTitle: 'Mushlya cafe',
                 map: 'https://g.page/mushlya-cafe?share'
             },
-            text: 'Remember to talk about deadline and how to extend the time that left before',
+            text: 'The Ad Hoc Committee was therefore invited either to extend the deadline for the submission of information by States or to reverse its previous decision regarding the analytical study.',
             friends: [
                 {
                     name: 'Dinesh',
@@ -149,8 +149,13 @@ class App extends React.Component {
 
     };
 
-    updateTask = (task) => {
-        console.log('update',task)
+    updateTask = (editedTask) => {
+        console.log('update',editedTask);
+        const {tasksList} = this.state;
+
+        this.setState({
+            tasksList: tasksList.map( task => task.id === editedTask.id ? editedTask : task )
+        })
     };
 	render() {
 

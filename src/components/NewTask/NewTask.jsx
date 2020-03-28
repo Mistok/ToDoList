@@ -7,25 +7,23 @@ import styled, { keyframes } from 'styled-components';
 const SlideInDown = styled.div`animation: .8s ${keyframes`${slideInDown}`} `;
 
 class NewTask extends React.Component{
-
-
-
-        state = {
-            id: this.props.task.id ? this.props.task.id : '',
-            author: 'Roger Bridges',
-            date: this.props.task.date ? this.props.task.date : '',
-            time: this.props.task.time ? this.props.task.time :'',
-            title: this.props.task.title ? this.props.task.title : '',
-            location: {
-                locationTitle: this.props.task.locationTitle ? this.props.task.locationTitle : '',
-                map: '#'
-            },
-            text: this.props.task.text ? this.props.task.text : '',
-            friends: [{
-                name: '',
-                avatar: ''
-            },]
-        };
+    
+    state = {
+        id: this.props.task.id ? this.props.task.id : '',
+        author: 'Roger Bridges',
+        date: this.props.task.date ? this.props.task.date : '',
+        time: this.props.task.time ? this.props.task.time :'',
+        title: this.props.task.title ? this.props.task.title : '',
+        location: {
+            locationTitle: this.props.task.locationTitle ? this.props.task.locationTitle : '',
+            map: '#'
+        },
+        text: this.props.task.text ? this.props.task.text : '',
+        friends: [{
+            name: '',
+            avatar: ''
+        },]
+    };
 
     clearForm = () => {
 
@@ -54,7 +52,7 @@ class NewTask extends React.Component{
         let {author, date, time, title, location, text, friends} = this.state;
 
         let newTask = {
-            id: Date.now(),
+            id: this.props.task.id ? this.props.task.id : Date.now(),
             author,
             date,
             time,
