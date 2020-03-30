@@ -155,7 +155,18 @@ class App extends React.Component {
             tasksList: tasksList.map( task => task.id === editedTask.id ? editedTask : task )
         })
     };
-	render() {
+
+    componentWillUpdate(){
+        console.log('data to LS');
+        localStorage.setItem('tasks', JSON.stringify(this.state.tasksList));
+    }
+
+    componentWillMount() {
+        console.log('data from LS');
+        localStorage.getItem('tasks') && this.setState({tasksList: JSON.parse(localStorage.getItem('tasks'))})
+    }
+
+    render() {
 
         let {tasksList} = this.state;
 
