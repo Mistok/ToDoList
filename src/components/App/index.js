@@ -156,12 +156,12 @@ class App extends React.Component {
         })
     };
 
-    componentWillUpdate(){
+    componentDidUpdate(){
         console.log('data to LS');
         localStorage.setItem('tasks', JSON.stringify(this.state.tasksList));
     }
 
-    componentWillMount() {
+    componentDidMount() {
         console.log('data from LS');
         localStorage.getItem('tasks') && this.setState({tasksList: JSON.parse(localStorage.getItem('tasks'))})
     }

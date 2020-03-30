@@ -35,7 +35,7 @@ class Calendar extends React.Component{
         return this.state.dateContext.daysInMonth();
     };
     currentDate = () => {
-        console.log("currentDate: ", this.state.dateContext.get("date"));
+        //console.log("currentDate: ", this.state.dateContext.get("date"));
         return this.state.dateContext.get("date");
     };
     currentDay = () => {
@@ -167,7 +167,7 @@ class Calendar extends React.Component{
         this.setState({
             selectedDay: day
         }, () => {
-            console.log("SELECTED DAY: ", this.state.selectedDay);
+            //console.log("SELECTED DAY: ", this.state.selectedDay);
         });
 
         this.props.onDayClick && this.props.onDayClick(e, day);
@@ -206,7 +206,7 @@ class Calendar extends React.Component{
         }
 
 
-        console.log("days: ", daysInMonth);
+        //console.log("days: ", daysInMonth);
 
         var totalSlots = [...blanks, ...daysInMonth];
         let rows = [];
