@@ -15,3 +15,10 @@
 .content_tasks{
     flex-basis: 75% ;
 }
+
+@media screen and ( max-width: 768px) {
+    .content_container{
+        flex-direction: column;
+        background-color: red;
+    }
+}
