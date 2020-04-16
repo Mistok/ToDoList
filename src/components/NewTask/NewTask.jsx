@@ -1,5 +1,5 @@
 import React from 'react'
-import {style} from './newTask.scss'
+import style from './newTask.scss'
 
 import { slideInDown } from 'react-animations';
 
@@ -78,14 +78,14 @@ class NewTask extends React.Component{
 
         return(
             <SlideInDown>
-                <div className="formContainer">
-                    <form onSubmit={this.handleSubmit} className='add_task_form' action="#">
-                        <label htmlFor="add_title" className='add_title'>
+                <div className={style.formContainer}>
+                    <form onSubmit={this.handleSubmit} className={style.add_task_form} action="#">
+                        <label htmlFor="add_title" className={style.add_title}>
                             <span>Task title</span>
-                            <input onChange={this.onChangeHandle} id='add_title' name="title" type="text"  value={title} required/>
+                            <input onChange={this.onChangeHandle} id={style.add_title} name="title" type="text"  value={title} required/>
                         </label>
-                        <div className="add_devider">
-                            <div className="add_left_col">
+                        <div className={style.add_devider}>
+                            <div className={style.add_left_col}>
                                 <label htmlFor="add_data">
                                     <span>Add date</span>
                                     <input onChange={this.onChangeHandle} id="add_data" name="date" type="date"  value={date} required/>
@@ -99,13 +99,13 @@ class NewTask extends React.Component{
                                     <input onChange={this.onChangeHandle} id='add_location' name='location' value={location.locationTitle} type="text" />
                                 </label>
                             </div>
-                            <div className="add_right_col">
+                            <div className={style.add_right_col}>
                                 <label htmlFor="add_text">
                                     <span>Add task description</span>
                                     <textarea onChange={this.onChangeHandle} placeholder='task description here' name='text' value={text} />
                                 </label>
                                 <label htmlFor="add_friend_select" >
-                                    <span className='add_friend_select_label'>Add friends</span>
+                                    <span className={style.add_friend_select_label}>Add friends</span>
                                     <select name="add_friend_select" id="add_friend_select" >
                                         <option value="" defaultValue='selected'>none</option>
                                         <option value="sara">Sara</option>
@@ -117,7 +117,7 @@ class NewTask extends React.Component{
                                         <option value="dinesh">Dinesh</option>
                                     </select>
                                 </label>
-                                <input onSubmit={this.handleSubmit} className='add_submit_btn' htmlFor="add_task_form" type="submit" value='Add task'/>
+                                <input onSubmit={this.handleSubmit} className={style.add_submit_btn} htmlFor="add_task_form" type="submit" value='Add task'/>
                             </div>
                         </div>
                     </form>

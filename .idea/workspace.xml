@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4002bb4-fa91-4fda-b57b-eb5d511f94fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Calendar/Calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Calendar/Calendar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Calendar/calendar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Calendar/calendar.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/content.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/content.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/site/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -45,8 +34,8 @@
           <entry key="html" value="4" />
           <entry key="js" value="21" />
           <entry key="json" value="3" />
-          <entry key="jsx" value="46" />
-          <entry key="scss" value="23" />
+          <entry key="jsx" value="48" />
+          <entry key="scss" value="24" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
@@ -55,9 +44,9 @@
           <entry key="CSS" value="33" />
           <entry key="HTML" value="4" />
           <entry key="JSON" value="3" />
-          <entry key="JSX Harmony" value="46" />
+          <entry key="JSX Harmony" value="48" />
           <entry key="JavaScript" value="21" />
-          <entry key="SCSS" value="23" />
+          <entry key="SCSS" value="24" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
@@ -67,7 +56,7 @@
           <entry key="html" value="43" />
           <entry key="js" value="2345" />
           <entry key="json" value="148" />
-          <entry key="jsx" value="10639" />
+          <entry key="jsx" value="10686" />
           <entry key="scss" value="2219" />
         </counts>
       </usages-collector>
@@ -76,7 +65,7 @@
           <entry key="CSS" value="1504" />
           <entry key="HTML" value="43" />
           <entry key="JSON" value="148" />
-          <entry key="JSX Harmony" value="10639" />
+          <entry key="JSX Harmony" value="10686" />
           <entry key="JavaScript" value="2345" />
           <entry key="SCSS" value="2219" />
         </counts>
@@ -85,6 +74,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Navigation/navigation.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="86" column="59" lean-forward="true" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/NewTask/newTask.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Content/Content.jsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -114,27 +136,6 @@
               <folding>
                 <element signature="e#1#27#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Content/Calendar/Calendar.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="193" column="44" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Content/Calendar/calendar.module.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -178,7 +179,9 @@
       <find>content</find>
       <find>week</find>
       <find>cu</find>
+      <find>hea</find>
       <find>se;e</find>
+      <find>formCon</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -208,8 +211,6 @@
         <option value="$PROJECT_DIR$/src/Static/state.js" />
         <option value="$PROJECT_DIR$/src/components/Content/Tasks/Task/task.module.scss" />
         <option value="$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" />
-        <option value="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" />
         <option value="$PROJECT_DIR$/src/components/App/index.js" />
         <option value="$PROJECT_DIR$/src/components/Navigation/navigation.scss" />
         <option value="$PROJECT_DIR$/src/components/App/app.module.scss" />
@@ -222,6 +223,8 @@
         <option value="$PROJECT_DIR$/src/components/Content/content.module.scss" />
         <option value="$PROJECT_DIR$/src/components/Content/Calendar/Calendar.jsx" />
         <option value="$PROJECT_DIR$/src/components/Content/Calendar/calendar.module.scss" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" />
+        <option value="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" />
       </list>
     </option>
   </component>
@@ -263,11 +266,6 @@
             <path>
               <item name="Exmple" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exmple" type="462c0819:PsiDirectoryNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exmple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exmple" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -289,6 +287,27 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exmple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exmple" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exmple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exmple" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exmple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exmple" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="NewTask" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Exmple" type="b2602c69:ProjectViewProjectNode" />
@@ -359,12 +378,12 @@
       <workItem from="1584053993282" duration="63582000" />
       <workItem from="1584651752504" duration="86634000" />
       <workItem from="1586981223041" duration="1378000" />
-      <workItem from="1587033131851" duration="13794000" />
+      <workItem from="1587033131851" duration="17223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168529000" />
+    <option name="totallyTimeSpent" value="171958000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -379,7 +398,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17931548" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17931548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -467,13 +486,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/react/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NewTask/newTask.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1580">
-          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Static/state.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/react-animations/lib/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -484,26 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="16926" column="12" selection-start-line="16926" selection-start-column="12" selection-end-line="16926" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/navigation.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -600,6 +592,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Content/Calendar/calendar.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Content/Calendar/Calendar.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -620,10 +619,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Content/Calendar/calendar.module.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/navigation.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+        <state relative-caret-position="120">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NewTask/newTask.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="86" column="59" lean-forward="true" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
