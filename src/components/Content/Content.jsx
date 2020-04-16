@@ -1,7 +1,7 @@
 import React from 'react'
 import Calendar from "./Calendar/Calendar.jsx";
 import Tasks from "./Tasks/Tasks.jsx";
-import {style} from './content.module.scss';
+import style from './content.module.scss';
 
 const styles = {
     position: 'relative',
@@ -12,14 +12,14 @@ class Content extends React.Component{
 
     render(){
         return(
-            <div className="content_wrapper">
+            <div className={style.content_wrapper}>
                 <div className="container">
-                    <div className='content_container'>
-                        <div className="content_calendar">
+                    <div className={style.content_container}>
+                        <div className={style.content_calendar}>
                             <Calendar style={styles} width='420px' />
                         </div>
 
-                        <div className='content_tasks'>
+                        <div className={style.content_tasks}>
                             <Tasks
                                 tasks = { this.props.tasks }
                                 removeTask = { this.props.removeTask }

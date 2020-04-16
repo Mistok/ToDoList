@@ -1,5 +1,5 @@
 import React from 'react';
-import {Styles} from './calendar.module.scss';
+import style from './calendar.module.scss';
 import moment from 'moment';
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -35,7 +35,6 @@ class Calendar extends React.Component{
         return this.state.dateContext.daysInMonth();
     };
     currentDate = () => {
-        //console.log("currentDate: ", this.state.dateContext.get("date"));
         return this.state.dateContext.get("date");
     };
     currentDay = () => {
@@ -78,7 +77,6 @@ class Calendar extends React.Component{
     onSelectChange = (e, data) => {
         this.setMonth(data);
         this.props.onMonthChange && this.props.onMonthChange();
-
     };
     SelectList = (props) => {
         let popup = props.data.map((data) => {
@@ -92,7 +90,7 @@ class Calendar extends React.Component{
         });
 
         return (
-            <div className="month-popup">
+            <div className={style.month_popup}>
                 {popup}
             </div>
         );
@@ -106,7 +104,7 @@ class Calendar extends React.Component{
 
     MonthNav = () => {
         return (
-            <span className="label-month"
+            <span className={style.label_month}
                   onClick={(e)=> {this.onChangeMonth(e, this.month())}}>
                 {this.month()}
                 {this.state.showMonthPopup &&
@@ -148,7 +146,7 @@ class Calendar extends React.Component{
             this.state.showYearNav ?
                 <input
                     defaultValue = {this.year()}
-                    className="editor-year"
+                    className={style.editor_year}
                     ref={(yearInput) => { this.yearInput = yearInput}}
                     onKeyUp= {(e) => this.onKeyUpYear(e)}
                     onChange = {(e) => this.onYearChange(e)}
@@ -156,7 +154,7 @@ class Calendar extends React.Component{
                     placeholder="year"/>
                 :
                 <span
-                    className="label-year"
+                    className={style.label_year}
                     onDoubleClick={(e)=> { this.showYearEditor()}}>
                 {this.year()}
             </span>
@@ -180,7 +178,7 @@ class Calendar extends React.Component{
             return (
                 <>
                 {/*<td key={day} className="week-day">{day}</td>*/}
-                    <div key={day} className='week_day'>{day}</div>
+                    <div key={day} className={style.week_day_container}>{day}</div>
                 </>
                 )
         });
@@ -192,19 +190,18 @@ class Calendar extends React.Component{
             );
         }
 
-        //console.log("blanks: ", blanks);
-
         let daysInMonth = [];
+        let curDay = style.current_day + '  ' +  style.day;
+
         for (let d = 1; d <= this.daysInMonth(); d++) {
-            let className = (d == this.currentDay() ? "day current-day": "day");
-            let selectedClass = (d == this.state.selectedDay ? " selected-day " : "")
+            let className = (d == this.currentDay() ? curDay : style.day);
+            let selectedClass = (d == this.state.selectedDay ? style.selected_day : "");
             daysInMonth.push(
                 <div className={className + selectedClass}>
                     <span onClick={(e)=>{this.onDayClick(e, d)}}>{d}</span>
                 </div>
             );
         }
-
 
         //console.log("days: ", daysInMonth);
 
@@ -229,21 +226,21 @@ class Calendar extends React.Component{
 
         let trElems = rows.map((d, i) => {
             return (
-                <div className='table_row' key={i*100}>
+                <div className={style.table_row} key={i*100}>
                     {d}
                 </div>
             );
         });
         return(
-            <div className="content_wrapper">
 
-               <div className="calendar_container">
 
-                       <div className="calendar-wrapper">
+               <div className={style.calendar_container}>
 
-                           <div className="calendar_header">
+                       <div className={style.calendar_wrapper}>
 
-                               <FontAwesomeIcon className='calendar_month_left' icon={faChevronLeft} onClick={(e)=> {this.prevMonth()}}/>
+                           <div className={style.calendar_header}>
+
+                               <FontAwesomeIcon className={style.calendar_month_left} icon={faChevronLeft} onClick={(e)=> {this.prevMonth()}}/>
 
                                <div>
                                    <this.MonthNav />
@@ -251,12 +248,12 @@ class Calendar extends React.Component{
                                    <this.YearNav />
                                </div>
 
-                               <FontAwesomeIcon className='calendar_month_right' icon={faChevronRight} onClick={(e)=> {this.nextMonth()}}/>
+                               <FontAwesomeIcon className={style.calendar_month_right} icon={faChevronRight} onClick={(e)=> {this.nextMonth()}}/>
 
                            </div>
 
-                           <div className='calendar_days'>
-                               <div className='week_day_container'>
+                           <div className={style.calendar_days}>
+                               <div className={style.week_day_container}>
                                    {weekdays}
                                </div>
                                 {trElems}
@@ -264,7 +261,7 @@ class Calendar extends React.Component{
                        </div>
                    </div>
 
-            </div>
+
 
         )
     }

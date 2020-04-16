@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 const env = process.env.NODE_ENV || 'development';
 const isDev = env === 'development';
@@ -21,16 +22,21 @@ module.exports = {
 
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                use: [MiniCSSExtractPlugin.loader, "css-loader"]
             },
             {
                 test: /\.s[ac]ss$/i,
                 use: [
                     // Creates `style` nodes from JS strings
-                    "style-loader",
-                    // Translates CSS into CommonJS
-                    "css-loader",
-                    // Compiles Sass to CSS
+                    MiniCSSExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                localIdentName: "[local]-[hash:base64:5]"
+                            }
+                        }
+                    },
                     "sass-loader"
                 ],
             },
@@ -55,6 +61,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new MiniCSSExtractPlugin({
+            filename: 'style.css'
+        }),
         new CopyWebpackPlugin([
             { from: path.resolve('./dev/static'), to: path.resolve('.site') }
         ]),

@@ -1,20 +1,20 @@
 
 import React from 'react';
-import {Style} from './header.scss';
-//console.log(Style);
+import style from './header.scss';
+
 class Header extends React.Component {
 
 
     render(){
         return(<header>
                 <div className='container'>
-                    <div className='header_container'>
-                        <div className='logo_container'>
-                            <img className='logo' src="../../../assets/logo.png" alt="Logo"/>
+                    <div className={style.header_container}>
+                        <div className={style.logo_container}>
+                            <img className={style.logo} src="../../../assets/logo.png" alt="Logo"/>
                         </div>
-                        <div className='menu'>
-                            <input className='search_field'  type="text" onClick={console}/>
-                            <img className='profile_ava'  src="../../../assets/ava.png" alt="ava"/>
+                        <div className={style.menu}>
+                            <input className={style.search_field}  type="text" onClick={console}/>
+                            <img className={style.profile_ava}  src="../../../assets/ava.png" alt="ava"/>
                         </div>
                     </div>
                 </div>
