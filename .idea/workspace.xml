@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4002bb4-fa91-4fda-b57b-eb5d511f94fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/content.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/content.module.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/site/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -127,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Header/header.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="320">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
               <folding>
                 <element signature="e#1#27#0" expanded="true" />
               </folding>
@@ -139,11 +139,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Content/content.module.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="420">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -219,12 +219,12 @@
         <option value="$PROJECT_DIR$/src/components/Content/Content.jsx" />
         <option value="$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/components/Content/content.module.scss" />
         <option value="$PROJECT_DIR$/src/components/Content/Calendar/Calendar.jsx" />
         <option value="$PROJECT_DIR$/src/components/Content/Calendar/calendar.module.scss" />
         <option value="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" />
         <option value="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" />
         <option value="$PROJECT_DIR$/src/components/Header/header.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Content/content.module.scss" />
       </list>
     </option>
   </component>
@@ -378,12 +378,12 @@
       <workItem from="1584053993282" duration="63582000" />
       <workItem from="1584651752504" duration="86634000" />
       <workItem from="1586981223041" duration="1378000" />
-      <workItem from="1587033131851" duration="17895000" />
+      <workItem from="1587033131851" duration="18518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172630000" />
+    <option name="totallyTimeSpent" value="173253000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -585,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Content/content.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Content/Calendar/calendar.module.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
@@ -638,11 +631,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header/header.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="320">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
             <element signature="e#1#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Content/content.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
         </state>
       </provider>
     </entry>
