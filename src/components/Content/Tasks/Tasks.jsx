@@ -20,7 +20,13 @@ class Tasks extends React.Component{
         return(
             <div className="content_wrapper">
 
-                   { tasks.map( task => (<Task task = {task} key = {task.id} removeTask = {removeTask} editTask = {tasksEditTask}/>) ) }
+               { tasks.map( task => (
+                   <Task
+                       task = {task}
+                       key = {task.id}
+                       removeTask = {removeTask}
+                       editTask = {tasksEditTask}/>) )
+               }
 
             </div>
 

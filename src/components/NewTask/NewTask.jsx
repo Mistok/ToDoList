@@ -6,6 +6,7 @@ import { slideInDown } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 const SlideInDown = styled.div`animation: .8s ${keyframes`${slideInDown}`} `;
 
+
 class NewTask extends React.Component{
 
     state = {
@@ -24,7 +25,6 @@ class NewTask extends React.Component{
             avatar: ''
         },]
     };
-
     clearForm = () => {
 
         this.setState(this.state = {
@@ -45,7 +45,7 @@ class NewTask extends React.Component{
 
         })
     };
-
+    // Отправка нового таска
     handleSubmit = (e) =>{
         e.preventDefault();
 
@@ -61,12 +61,15 @@ class NewTask extends React.Component{
             text,
             friends,
         };
+        debugger
         this.props.addNewTask(newTask, e);
+
         this.clearForm()
 
     };
-    onChangeHandle = (e) => {
 
+    // Изменение в стейте при изменение полей ввода
+    onChangeHandle = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })

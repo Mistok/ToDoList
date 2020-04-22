@@ -139,8 +139,9 @@ const App = () => {
     //     });
     // };
 
-    const addNewTask = () => {
-        taskList: changeTaskList(newTask, ...taskList)
+    const addNewTask = (newTask) => {
+        console.log('adding the new task')
+        changeTaskList(newTask, ...taskList)
     };
 
 
@@ -154,8 +155,8 @@ const App = () => {
     // };
 
     const deleteTask = (taskId, e) => {
-      e.preventDefault();
-      taskList.filter(item => item.id !== taskId)
+        e.preventDefault();
+        changeTaskList(taskList.filter(item => item.id !== taskId));
     };
 
     // updateTask = (editedTask) => {
@@ -167,26 +168,26 @@ const App = () => {
     //     })
     // };
 
-    const updateTask = (taskId, e) => {
-        taskList.map( task => task.id === editedTask.id ? editedTask : task )
+    const updateTask = (editedTask) => {
+        changeTaskList(taskList.map( task => task.id === editedTask.id ? editedTask : task ))
     };
 
-    useEffect(
-        () => {
-            console.log('data to LS');
-            localStorage.setItem('tasks', JSON.stringify(taskList));
-        }
-    );
+   // useEffect(
+   //     () => {
+    //        console.log('data to LS');
+   //         localStorage.setItem('tasks', JSON.stringify(taskList));
+  //      }
+   // );
     // componentDidUpdate(){
     //     console.log('data to LS');
     //     localStorage.setItem('tasks', JSON.stringify(this.state.tasksList));
     // }
-    useEffect(
-        () => {
-            console.log('data from LS');
-            localStorage.getItem('tasks') && changeTaskList({taskList: JSON.parse(localStorage.getItem('tasks'))})
-        }
-    );
+    // useEffect(
+    //     () => {
+    //         console.log('data from LS');
+    //         localStorage.getItem('tasks') && changeTaskList({taskList: JSON.parse(localStorage.getItem('tasks'))})
+    //     }
+    // );
     // componentDidMount(){
     //     console.log('data from LS');
     //     localStorage.getItem('tasks') && this.setState({tasksList: JSON.parse(localStorage.getItem('tasks'))})
@@ -196,7 +197,7 @@ const App = () => {
     return (
         <>
             <Header/>
-            <Nav addNewTask={addNewTask}/>
+            <Nav addNewTask={ addNewTask }/>
             <Content
                 tasks={ taskList }
                 removeTask= { deleteTask }
