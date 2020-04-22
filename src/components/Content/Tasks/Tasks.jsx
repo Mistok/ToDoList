@@ -15,13 +15,13 @@ class Tasks extends React.Component{
 
     render(){
         const {tasks, removeTask, tasksEditTask} = this.props;
-
+        console.log(tasks);
+        debugger
         return(
             <div className="content_wrapper">
 
-               <FadeOutDown>
                    { tasks.map( task => (<Task task = {task} key = {task.id} removeTask = {removeTask} editTask = {tasksEditTask}/>) ) }
-               </FadeOutDown>
+
             </div>
 
         )

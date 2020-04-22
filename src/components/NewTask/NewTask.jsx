@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import style from './newTask.scss'
 
 import { slideInDown } from 'react-animations';

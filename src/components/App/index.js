@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import Header from "../Header/header.jsx";
 import Nav from "../Navigation/navigation.jsx";
@@ -125,63 +125,86 @@ import Content from "../Content/Content.jsx";
     ];
 
 
-class App extends React.Component {
-    state = {
-      tasksList:  tasks
+const App = () => {
+    // state = {
+    //   tasksList:  tasks
+    // };
+    const [taskList, changeTaskList] = useState(tasks);
+
+    // addNewTask = (newTask) => {
+    //     const {tasksList} = this.state;
+    //
+    //     this.setState ({
+    //         tasksList: [newTask, ...tasksList]
+    //     });
+    // };
+
+    const addNewTask = () => {
+        taskList: changeTaskList(newTask, ...taskList)
     };
 
-    addNewTask = (newTask) => {
-        const {tasksList} = this.state;
 
-        this.setState ({
-            tasksList: [newTask, ...tasksList]
-        });
+    // deleteTask = (taskId, e) => {
+    //     e.preventDefault();
+    //     const {tasksList} = this.state;
+    //
+    //     this.setState ({
+    //         tasksList: tasksList.filter(item => item.id !== taskId),
+    //     });
+    // };
+
+    const deleteTask = (taskId, e) => {
+      e.preventDefault();
+      taskList.filter(item => item.id !== taskId)
     };
 
-    deleteTask = (taskId, e) => {
-        e.preventDefault();
-        const {tasksList} = this.state;
+    // updateTask = (editedTask) => {
+    //
+    //     const {tasksList} = this.state;
+    //
+    //     this.setState({
+    //         tasksList: tasksList.map( task => task.id === editedTask.id ? editedTask : task )
+    //     })
+    // };
 
-        this.setState ({
-            tasksList: tasksList.filter(item => item.id !== taskId),
-        });
+    const updateTask = (taskId, e) => {
+        taskList.map( task => task.id === editedTask.id ? editedTask : task )
     };
 
-    updateTask = (editedTask) => {
+    useEffect(
+        () => {
+            console.log('data to LS');
+            localStorage.setItem('tasks', JSON.stringify(taskList));
+        }
+    );
+    // componentDidUpdate(){
+    //     console.log('data to LS');
+    //     localStorage.setItem('tasks', JSON.stringify(this.state.tasksList));
+    // }
+    useEffect(
+        () => {
+            console.log('data from LS');
+            localStorage.getItem('tasks') && changeTaskList({taskList: JSON.parse(localStorage.getItem('tasks'))})
+        }
+    );
+    // componentDidMount(){
+    //     console.log('data from LS');
+    //     localStorage.getItem('tasks') && this.setState({tasksList: JSON.parse(localStorage.getItem('tasks'))})
+    // }
 
-        const {tasksList} = this.state;
 
-        this.setState({
-            tasksList: tasksList.map( task => task.id === editedTask.id ? editedTask : task )
-        })
-    };
+    return (
+        <>
+            <Header/>
+            <Nav addNewTask={addNewTask}/>
+            <Content
+                tasks={ taskList }
+                removeTask= { deleteTask }
+                contentEditTask = { updateTask }
+            />
+        </>
+    );
 
-    componentDidUpdate(){
-        console.log('data to LS');
-        localStorage.setItem('tasks', JSON.stringify(this.state.tasksList));
-    }
-
-    componentDidMount() {
-        console.log('data from LS');
-        localStorage.getItem('tasks') && this.setState({tasksList: JSON.parse(localStorage.getItem('tasks'))})
-    }
-
-    render() {
-
-        let {tasksList} = this.state;
-
-        return (
-            <>
-                <Header/>
-                <Nav addNewTask={this.addNewTask}/>
-                <Content
-                    tasks={ tasksList }
-                    removeTask= { this.deleteTask }
-                    contentEditTask = { this.updateTask }
-                />
-            </>
-        );
-	}
-}
+};
 
 export default App;
