@@ -131,6 +131,15 @@ const App = () => {
     // };
     const [taskList, changeTaskList] = useState(tasks);
 
+    const toLS = () => {
+
+
+    };
+
+    const fromLS = () => {
+
+        localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')))
+    };
     // addNewTask = (newTask) => {
     //     const {tasksList} = this.state;
     //
@@ -141,9 +150,10 @@ const App = () => {
 
     const addNewTask = (newTask) => {
         console.log('adding the new task');
-        changeTaskList([newTask, ...taskList])
+        changeTaskList([newTask, ...taskList]);
+        console.log(`new taskList ${taskList}`);
+        //toLS();
     };
-
 
     // deleteTask = (taskId, e) => {
     //     e.preventDefault();
@@ -157,6 +167,7 @@ const App = () => {
     const deleteTask = (taskId, e) => {
         e.preventDefault();
         changeTaskList(taskList.filter(item => item.id !== taskId));
+        //toLS();
     };
 
     // updateTask = (editedTask) => {
@@ -169,30 +180,31 @@ const App = () => {
     // };
 
     const updateTask = (editedTask) => {
-        changeTaskList(taskList.map( task => task.id === editedTask.id ? editedTask : task ))
+        changeTaskList(taskList.map( task => task.id === editedTask.id ? editedTask : task ));
+        //toLS();
     };
 
-   // useEffect(
-   //     () => {
-    //        console.log('data to LS');
-   //         localStorage.setItem('tasks', JSON.stringify(taskList));
-  //      }
-   // );
     // componentDidUpdate(){
     //     console.log('data to LS');
     //     localStorage.setItem('tasks', JSON.stringify(this.state.tasksList));
     // }
-    // useEffect(
-    //     () => {
-    //         console.log('data from LS');
-    //         localStorage.getItem('tasks') && changeTaskList({taskList: JSON.parse(localStorage.getItem('tasks'))})
-    //     }
-    // );
+
     // componentDidMount(){
     //     console.log('data from LS');
     //     localStorage.getItem('tasks') && this.setState({tasksList: JSON.parse(localStorage.getItem('tasks'))})
     // }
-
+    useEffect(() => {
+            if(localStorage.getItem('tasks')){
+                fromLS();
+                console.log('data from LS');
+            }
+        },
+        []
+    );
+    useEffect(()=>{
+        localStorage.setItem('tasks', JSON.stringify(taskList));
+        console.log('data to LS');
+    });
 
     return (
         <>

@@ -61,7 +61,7 @@ class NewTask extends React.Component{
             text,
             friends,
         };
-        debugger
+
         this.props.addNewTask(newTask, e);
 
         this.clearForm()

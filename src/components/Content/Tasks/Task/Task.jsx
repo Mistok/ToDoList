@@ -36,15 +36,13 @@ class Task extends React.Component{
         const stylesCalendar = style.task_feature_icon+ ' ' + style.calendar;
         const stylesTime = style.task_feature_icon + ' ' + style.time;
 
-
-
         const {id, author, date, time, title, location, text, friends} = this.props.task;
         const locationTitle = this.props.task.location.locationTitle;
         const {removeTask, editTask} = this.props;
         const {isEdit} = this.state;
         const remove = (id, e) =>{
             removeTask(id, e);
-            console.log(location)
+
         };
             return(
 
