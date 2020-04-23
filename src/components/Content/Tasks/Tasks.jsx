@@ -15,8 +15,7 @@ class Tasks extends React.Component{
 
     render(){
         const {tasks, removeTask, tasksEditTask} = this.props;
-        console.log(tasks);
-        debugger
+
         return(
             <div className="content_wrapper">
 

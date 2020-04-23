@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4002bb4-fa91-4fda-b57b-eb5d511f94fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/site/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -57,7 +55,7 @@
         <counts>
           <entry key="css" value="1504" />
           <entry key="html" value="43" />
-          <entry key="js" value="2743" />
+          <entry key="js" value="2747" />
           <entry key="json" value="148" />
           <entry key="jsx" value="11038" />
           <entry key="scss" value="2219" />
@@ -69,7 +67,7 @@
           <entry key="HTML" value="43" />
           <entry key="JSON" value="148" />
           <entry key="JSX Harmony" value="11038" />
-          <entry key="JavaScript" value="2743" />
+          <entry key="JavaScript" value="2747" />
           <entry key="SCSS" value="2219" />
         </counts>
       </usages-collector>
@@ -89,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="840">
               <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -101,16 +99,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/App/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="199" column="15" selection-start-line="199" selection-start-column="15" selection-end-line="199" selection-end-column="15" />
+              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#179#3836#0" />
-                <marker date="1587586954080" expanded="true" signature="5100:5261" ph="..." />
-                <marker date="1587586954080" expanded="true" signature="5425:5639" ph="..." />
+                <marker date="1587623585441" expanded="true" signature="5103:5264" ph="..." />
+                <marker date="1587623585441" expanded="true" signature="5428:5642" ph="..." />
               </folding>
             </state>
           </provider>
@@ -131,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+            <state relative-caret-position="219">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -235,9 +233,9 @@
         <option value="$PROJECT_DIR$/src/components/Header/header.jsx" />
         <option value="$PROJECT_DIR$/src/components/Content/content.module.scss" />
         <option value="$PROJECT_DIR$/site/index.html" />
-        <option value="$PROJECT_DIR$/src/components/App/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx" />
         <option value="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx" />
+        <option value="$PROJECT_DIR$/src/components/App/index.js" />
       </list>
     </option>
   </component>
@@ -405,12 +403,12 @@
       <workItem from="1584651752504" duration="86634000" />
       <workItem from="1586981223041" duration="1378000" />
       <workItem from="1587033131851" duration="20084000" />
-      <workItem from="1587501560334" duration="13020000" />
+      <workItem from="1587501560334" duration="14913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187839000" />
+    <option name="totallyTimeSpent" value="189732000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Content/content.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -630,26 +621,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/Content/content.module.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="199" column="15" selection-start-line="199" selection-start-column="15" selection-end-line="199" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#179#3836#0" />
-            <marker date="1587586954080" expanded="true" signature="5100:5261" ph="..." />
-            <marker date="1587586954080" expanded="true" signature="5425:5639" ph="..." />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -663,12 +638,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Content/Tasks/Tasks.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="840">
           <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#179#3836#0" />
+            <marker date="1587623585441" expanded="true" signature="5103:5264" ph="..." />
+            <marker date="1587623585441" expanded="true" signature="5428:5642" ph="..." />
           </folding>
         </state>
       </provider>

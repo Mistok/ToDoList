@@ -140,8 +140,8 @@ const App = () => {
     // };
 
     const addNewTask = (newTask) => {
-        console.log('adding the new task')
-        changeTaskList(newTask, ...taskList)
+        console.log('adding the new task');
+        changeTaskList([newTask, ...taskList])
     };
 
 
