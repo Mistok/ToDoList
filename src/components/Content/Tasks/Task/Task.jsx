@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import style from './task.module.scss'
 import { faClock, faMapMarkedAlt, faCalendar, faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
@@ -9,40 +9,44 @@ import NewTask from "../../../NewTask/NewTask.jsx";
 
 const FadeInUp = styled.div`animation: 2s ${keyframes`${fadeInUp}`} `;
 
-class Task extends React.Component{
+const Task = (props) => {
 
-    state = {
-        isEdit: false,
-    };
+    // state = {
+    //     isEdit: false,
+    // };
 
-    handleChange = (e) => {
-        const {isEdit} = this.state;
+    const [isEdit, changeIsEdit] = useState(false);
+
+    // handleChange = (e) => {
+    //     const {isEdit} = this.state;
+    //     e.preventDefault();
+    //
+    //     this.setState({
+    //         isEdit: !isEdit,
+    //     })
+    // };
+
+
+
+    const updateTask = (newTask, e) => {
         e.preventDefault();
-
-        this.setState({
-            isEdit: !isEdit,
-        })
+        changeIsEdit(!isEdit);
+        props.editTask(newTask)
     };
 
-    updateTask = (newTask, e) => {
-        this.handleChange(e);
-        this.props.editTask(newTask)
-    };
 
-    render(){
         /* styles */
 
         const stylesMap = style.task_feature_icon + ' ' + style.map;
         const stylesCalendar = style.task_feature_icon+ ' ' + style.calendar;
         const stylesTime = style.task_feature_icon + ' ' + style.time;
 
-        const {id, author, date, time, title, location, text, friends} = this.props.task;
-        const locationTitle = this.props.task.location.locationTitle;
-        const {removeTask, editTask} = this.props;
-        const {isEdit} = this.state;
+        const {id, author, date, time, title, location, text, friends} = props.task;
+        const locationTitle = props.task.location.locationTitle;
+        const {removeTask, editTask} = props;
+
         const remove = (id, e) =>{
             removeTask(id, e);
-
         };
             return(
 
@@ -53,7 +57,7 @@ class Task extends React.Component{
                         isEdit ? (
                             <NewTask
                                 task = {{id, author, date, time, title, locationTitle, text, friends }}
-                                addNewTask = {this.updateTask}
+                                addNewTask = {updateTask}
                             />
                         ) : (
                     <>
@@ -63,7 +67,7 @@ class Task extends React.Component{
                            <span className={style.task_header_text}>{author}</span>
                        </div>
                        <div className={style.task_header_right}>
-                           <a onClick={(e)=> {this.handleChange(e)}} href="#" className={style.task_delete_icon}><FontAwesomeIcon icon={faEdit}/></a>
+                           <a onClick={()=> {changeIsEdit(!isEdit)}} href="#" className={style.task_delete_icon}><FontAwesomeIcon icon={faEdit}/></a>
                            <a onClick={(e)=> {remove(id, e)}} href="#"><FontAwesomeIcon icon={faTrashAlt}/></a>
                        </div>
                    </div>
@@ -105,7 +109,6 @@ class Task extends React.Component{
                 </div>
             </FadeInUp>
         )
-    }
-}
+};
 
 export default Task;
