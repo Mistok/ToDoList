@@ -7,30 +7,26 @@ import { fadeOutDown } from 'react-animations';
 
 const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`} `;
 
-class Tasks extends React.Component{
+const Tasks = (props) => {
 
-    state  = {
-        showForm: false
-    };
 
-    render(){
-        const {tasks, removeTask, tasksEditTask} = this.props;
+    const {tasks, removeTask, tasksEditTask} = props;
 
-        return(
-            <div className="content_wrapper">
+    return(
+        <div className="content_wrapper">
 
-               { tasks.map( task => (
-                   <Task
-                       task = {task}
-                       key = {task.id}
-                       removeTask = {removeTask}
-                       editTask = {tasksEditTask}/>) )
-               }
+           { tasks.map( task => (
+               <Task
+                   task = {task}
+                   key = {task.id}
+                   removeTask = {removeTask}
+                   editTask = {tasksEditTask}/>) )
+           }
 
-            </div>
+        </div>
 
-        )
-    }
-}
+    )
+
+};
 
 export default Tasks;

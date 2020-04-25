@@ -8,30 +8,29 @@ const styles = {
     margin: '50px auto'
 };
 
-class Content extends React.Component{
+const Content = (props) => {
 
-    render(){
-        return(
-            <div className={style.content_wrapper}>
-                <div className="container">
-                    <div className={style.content_container}>
-                        <div className={style.content_calendar}>
-                            <Calendar style={styles} width='420px' />
-                        </div>
+    return(
+        <div className={style.content_wrapper}>
+            <div className="container">
+                <div className={style.content_container}>
+                    <div className={style.content_calendar}>
+                        <Calendar style={styles} width='420px' />
+                    </div>
 
-                        <div className={style.content_tasks}>
-                            <Tasks
-                                tasks = { this.props.tasks }
-                                removeTask = { this.props.removeTask }
-                                tasksEditTask = { this.props.contentEditTask }
-                            />
-                        </div>
+                    <div className={style.content_tasks}>
+                        <Tasks
+                            tasks = { props.tasks }
+                            removeTask = { props.removeTask }
+                            tasksEditTask = { props.contentEditTask }
+                        />
                     </div>
                 </div>
             </div>
+        </div>
 
-        )
-    }
-}
+    )
+
+};
 
 export default Content;
