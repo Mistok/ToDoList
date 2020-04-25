@@ -38,7 +38,7 @@ const Task = (props) => {
         /* styles */
 
         const stylesMap = style.task_feature_icon + ' ' + style.map;
-        const stylesCalendar = style.task_feature_icon+ ' ' + style.calendar;
+        const stylesCalendar = style.task_feature_icon + ' ' + style.calendar;
         const stylesTime = style.task_feature_icon + ' ' + style.time;
 
         const {id, author, date, time, title, location, text, friends} = props.task;
@@ -83,7 +83,7 @@ const Task = (props) => {
                         </div>
                         <div className={style.task_feature_item}>
                             <FontAwesomeIcon className={stylesCalendar} icon={faCalendar} />
-                            <span>Every Friday</span>
+                            <span>{date ? date : 'Every day'}</span>
                         </div>
                     </div>
                     <div className={style.task_description}>
