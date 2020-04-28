@@ -27,7 +27,7 @@ const NewTask = (props) => {
         },]
     };
 
-    const [newTask, setNewTask] = useState(mockupTask);
+    let [newTask, setNewTask] = useState(mockupTask);
 
     // очистка формы
     const clearForm = () => {
@@ -53,7 +53,7 @@ const NewTask = (props) => {
         e.preventDefault();
 
         if(!props.id){ // если мы создаем новую таску, то добавляем ID
-            setNewTask({...newTask, [id]: Date.now()})
+            setNewTask({...newTask, id: Date.now()})
         }
 
         props.addNewTask(newTask, e);

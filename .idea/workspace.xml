@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4002bb4-fa91-4fda-b57b-eb5d511f94fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/site/" />
@@ -60,7 +59,7 @@
           <entry key="html" value="43" />
           <entry key="js" value="2948" />
           <entry key="json" value="148" />
-          <entry key="jsx" value="13480" />
+          <entry key="jsx" value="13651" />
           <entry key="scss" value="2219" />
         </counts>
       </usages-collector>
@@ -69,7 +68,7 @@
           <entry key="CSS" value="1504" />
           <entry key="HTML" value="43" />
           <entry key="JSON" value="148" />
-          <entry key="JSX Harmony" value="13480" />
+          <entry key="JSX Harmony" value="13651" />
           <entry key="JavaScript" value="2948" />
           <entry key="SCSS" value="2219" />
         </counts>
@@ -81,10 +80,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Navigation/navigation.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+            <state relative-caret-position="120">
+              <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,11 +92,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="51" column="2" lean-forward="true" selection-start-line="51" selection-start-column="2" selection-end-line="63" selection-end-column="6" />
+            <state relative-caret-position="180">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
-                <marker date="1588075022606" expanded="true" signature="769:770" ph="..." />
+                <element signature="e#898#1266#0" />
+                <marker date="1588076885286" expanded="true" signature="769:770" ph="..." />
               </folding>
             </state>
           </provider>
@@ -197,7 +197,6 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/components/Content/Calendar/calendar.module.scss" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" />
         <option value="$PROJECT_DIR$/src/components/Header/header.jsx" />
         <option value="$PROJECT_DIR$/src/components/Content/content.module.scss" />
         <option value="$PROJECT_DIR$/site/index.html" />
@@ -206,6 +205,7 @@
         <option value="$PROJECT_DIR$/src/components/Content/Calendar/Calendar.jsx" />
         <option value="$PROJECT_DIR$/src/components/App/index.js" />
         <option value="$PROJECT_DIR$/src/components/Content/Tasks/Task/Task.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/navigation.jsx" />
         <option value="$PROJECT_DIR$/src/components/NewTask/NewTask.jsx" />
       </list>
     </option>
@@ -282,15 +282,6 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Content" type="462c0819:PsiDirectoryNode" />
               <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exmple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exmple" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="Task" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Exmple" type="b2602c69:ProjectViewProjectNode" />
@@ -383,12 +374,12 @@
       <workItem from="1584651752504" duration="86634000" />
       <workItem from="1586981223041" duration="1378000" />
       <workItem from="1587033131851" duration="20084000" />
-      <workItem from="1587501560334" duration="50151000" />
+      <workItem from="1587501560334" duration="51907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224970000" />
+    <option name="totallyTimeSpent" value="226726000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,7 +408,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074625" side_tool="true" weight="0.23300971" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49925372" weight="0.37161085" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49925372" visible="true" weight="0.37161085" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -635,21 +626,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Navigation/navigation.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+        <state relative-caret-position="120">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NewTask/NewTask.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="51" column="2" lean-forward="true" selection-start-line="51" selection-start-column="2" selection-end-line="63" selection-end-column="6" />
+        <state relative-caret-position="180">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <marker date="1588075022606" expanded="true" signature="769:770" ph="..." />
+            <element signature="e#898#1266#0" />
+            <marker date="1588076885286" expanded="true" signature="769:770" ph="..." />
           </folding>
         </state>
       </provider>
