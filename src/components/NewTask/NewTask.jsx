@@ -32,7 +32,7 @@ const NewTask = (props) => {
     // очистка формы
     const clearForm = () => {
         setNewTask({
-            id: '',
+            id: '0',
             author: 'Roger Bridges',
             date: ':',
             time: '',
@@ -48,17 +48,25 @@ const NewTask = (props) => {
             },]
         })
     };
-
     // отправка нового таска
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(!newTask.id)  setNewTask({...newTask, [newTask.id]: Date.now()});
+        if(!props.id){ // если мы создаем новую таску, то добавляем ID
+            setNewTask({...newTask, [id]: Date.now()})
+        }
 
         props.addNewTask(newTask, e);
 
+        setNewTask(newTask);
+
         clearForm()
     };
+
+    // let newATask = {
+    //     ...newTask,
+    //     id: props.id ? props.id : Date.now()
+    // };
 
     // Изменение в стейте при изменение полей ввода
 

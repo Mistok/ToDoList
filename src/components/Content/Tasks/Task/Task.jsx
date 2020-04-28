@@ -11,10 +11,6 @@ const FadeInUp = styled.div`animation: 2s ${keyframes`${fadeInUp}`} `;
 
 const Task = (props) => {
 
-    // state = {
-    //     isEdit: false,
-    // };
-
     const [isEdit, changeIsEdit] = useState(false);
 
     // handleChange left for prevent default action
