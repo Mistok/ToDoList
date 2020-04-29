@@ -58,8 +58,6 @@ const NewTask = (props) => {
 
         props.addNewTask(newTask, e);
 
-        setNewTask(newTask);
-
         clearForm()
     };
 
