@@ -33,7 +33,6 @@ const Task = (props) => {
 
     // parsing props task features
     const {id, author, date, time, title, location, text, friends} = props.task;
-    const locationTitle = props.task.location.locationTitle;
 
     const remove = (id, e) =>{
         props.removeTask(id, e);
@@ -46,7 +45,7 @@ const Task = (props) => {
             {
                 isEdit ? (
                     <NewTask
-                        task = {{id, author, date, time, title, locationTitle, text, friends }}
+                        task = {{id, author, date, time, title, location, text, friends }}
                         addNewTask = {updateTask}
                     />
                 ) : (
@@ -69,7 +68,7 @@ const Task = (props) => {
                 </div>
                 <div className={style.task_feature_item}>
                     <FontAwesomeIcon className={stylesMap} icon={faMapMarkedAlt} />
-                    <a className={style.task_feature_map} href={location.map}>{location.locationTitle}</a>
+                    <a className={style.task_feature_map} href={`https://maps.google.com?saddr=Current+Location&${location}`}>{location}</a>
                 </div>
                 <div className={style.task_feature_item}>
                     <FontAwesomeIcon className={stylesCalendar} icon={faCalendar} />

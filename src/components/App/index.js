@@ -11,11 +11,7 @@ import Content from "../Content/Content.jsx";
             date: '',
             time: '06:00',
             title: 'Training - Excercises',
-            location: {
-                locationTitle: 'Sport Life',
-                map: 'https://goo.gl/maps/aUgCZZFgGQg8iCEq6'
-            },
-
+            location: 'Sport Life',
             text: 'Legs day is the hardest day of the weak. And don`t forget to do some crunches 3/30',
             friends: [
                 {
@@ -43,10 +39,7 @@ import Content from "../Content/Content.jsx";
             date: '',
             time: '10:00',
             title: 'Lunch with partner',
-            location: {
-                locationTitle: 'Mushlya cafe',
-                map: 'https://g.page/mushlya-cafe?share'
-            },
+            location: 'Mushlya cafe',
             text: 'The Ad Hoc Committee was therefore invited either to extend the deadline for the submission of information by States or to reverse its previous decision regarding the analytical study.',
             friends: [
                 {
@@ -62,10 +55,7 @@ import Content from "../Content/Content.jsx";
             date: '',
             time: '11:40',
             title: 'Work on Presentation for Conference',
-            location: {
-                locationTitle: 'Office',
-                map: 'https://goo.gl/maps/5Esw7W7o8ctEaqvS6'
-            },
+            location: 'Office',
             text: 'Make an awesome presentation with my collegues and friends Allisa and Roger.  If you don\'t have a site in place or are looking for new ideas, you\'ll want to look elsewhere for labeling presentation. The open nature of the Web encourages an atmosphere of benevolent plagiarism',
             friends: [
                 {
@@ -85,10 +75,7 @@ import Content from "../Content/Content.jsx";
             date: '',
             time: '20:00',
             title: 'Adams birthday party',
-            location: {
-                locationTitle: 'Adam`s house',
-                map: 'https://goo.gl/maps/DgihmXY8gJa5DC8LA'
-            },
+            location: 'Adam`s house',
             text: 'Be carefull you must to look amazing if you wanna connect with the most glamours people all over the world...',
             friends: [
                 {
@@ -123,6 +110,8 @@ import Content from "../Content/Content.jsx";
             ]
         }
     ];
+
+
 
 
 const App = () => {

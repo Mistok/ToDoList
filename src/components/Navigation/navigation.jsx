@@ -6,13 +6,14 @@ const Nav = (props) => {
 
     const [isFormShown, changeIsFormShown ] = useState(false) ;
 
+    // Показать / скрыть форму для нового задания
+
     const newTaskToggler = (event) => {
         event.preventDefault();
 
         changeIsFormShown(!isFormShown);
     };
 
-   // const {formShown} = this.state;
     return(
         <nav>
             <div className='container'>

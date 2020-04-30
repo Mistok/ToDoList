@@ -16,10 +16,7 @@ const NewTask = (props) => {
         date: props.task.date || '',
         time: props.task.time || '',
         title: props.task.title || '',
-        location: {
-            locationTitle: props.task.locationTitle || '',
-            map: '#'
-        },
+        location: props.task.location || '',
         text: props.task.text || '',
         friends: [{
             name: '',
@@ -37,10 +34,7 @@ const NewTask = (props) => {
             date: ':',
             time: '',
             title: '',
-            location: {
-                locationTitle: 'somewhere in Kiev',
-                map: '#'
-            },
+            location:  'somewhere in Kiev',
             text: '',
             friends: [{
                 name: '',
@@ -51,7 +45,10 @@ const NewTask = (props) => {
     // отправка нового таска
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        // let newATask = {
+        //     ...newTask,
+        //     id: props.id ? props.id : Date.now()
+        // };
         if(!props.id){ // если мы создаем новую таску, то добавляем ID
             setNewTask({...newTask, id: Date.now()})
         }
@@ -60,6 +57,8 @@ const NewTask = (props) => {
 
         clearForm()
     };
+
+
 
     // Изменение в стейте при изменение полей ввода
 
@@ -89,7 +88,7 @@ const NewTask = (props) => {
                             </label>
                             <label htmlFor="add_location">
                                 <span>Add place</span>
-                                <input onChange={onChange} id='add_location' name='location' value={location.locationTitle} type="text" />
+                                <input onChange={onChange} id='add_location' name='location' value={location} type="text" />
                             </label>
                         </div>
                         <div className={style.add_right_col}>
