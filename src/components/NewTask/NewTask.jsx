@@ -61,11 +61,6 @@ const NewTask = (props) => {
         clearForm()
     };
 
-    // let newATask = {
-    //     ...newTask,
-    //     id: props.id ? props.id : Date.now()
-    // };
-
     // Изменение в стейте при изменение полей ввода
 
     const onChange = (e) =>{
