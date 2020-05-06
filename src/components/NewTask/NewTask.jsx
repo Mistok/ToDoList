@@ -4,6 +4,9 @@ import style from './newTask.scss'
 import { slideInDown } from 'react-animations';
 
 import styled, { keyframes } from 'styled-components';
+
+import {updateTask, addTask} from "../../actions/actions";
+
 const SlideInDown = styled.div`animation: .8s ${keyframes`${slideInDown}`} `;
 
 
@@ -43,18 +46,24 @@ const NewTask = (props) => {
         })
     };
     // отправка нового таска
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // let newATask = {
         //     ...newTask,
         //     id: props.id ? props.id : Date.now()
         // };
-        if(!props.id){ // если мы создаем новую таску, то добавляем ID
-            setNewTask({...newTask, id: Date.now()})
+
+
+        if(props.task){
+            updateTask(newTask);
+            //clearForm();
+        } else {
+            // если мы создаем новую таску, то добавляем ID
+            setNewTask({...newTask, id: Date.now()});
+            addTask(newTask)
         }
-
-        props.addNewTask(newTask, e);
-
         clearForm()
     };
 

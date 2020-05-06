@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Task from "./Task/Task.jsx";
 import styled, { keyframes } from 'styled-components';
 import { fadeOutDown } from 'react-animations';
@@ -11,8 +11,24 @@ const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`} `;
 const Tasks = (props) => {
 
     const [taskList, changeTaskList] = useState(store.getStore());
-
-
+    const callbackForEmit = () =>{
+        changeTaskList(store.getStore())
+    };
+    useEffect(()=>{
+        store.addEventListener(callbackForEmit);
+        return ()=>{
+            store.removeEventListener(callbackForEmit);
+        }
+    }, []);
+    useEffect(() => {
+            if(
+                localStorage.getItem('tasks')){
+                localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')))
+                console.log('data from LS');
+            }
+        },
+        []
+    );
     const {tasks, removeTask, tasksEditTask} = taskList;
 
     return(
@@ -22,8 +38,7 @@ const Tasks = (props) => {
                <Task
                    task = {task}
                    key = {task.id}
-                   removeTask = {removeTask}
-                   editTask = {tasksEditTask}/>) )
+                   />) )
            }
 
         </div>

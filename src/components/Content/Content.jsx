@@ -19,11 +19,7 @@ const Content = (props) => {
                     </div>
 
                     <div className={style.content_tasks}>
-                        <Tasks
-                            tasks = { props.tasks }
-                            removeTask = { props.removeTask }
-                            tasksEditTask = { props.contentEditTask }
-                        />
+                        <Tasks/>
                     </div>
                 </div>
             </div>

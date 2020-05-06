@@ -1,6 +1,7 @@
 import {Dispatcher} from "flux";
 import EventEmitter from "events";
 
+
 const EVENT = 'ololo';
 
 let tasks = [
@@ -105,7 +106,6 @@ let tasks = [
                 name: 'Dinesh',
                 avatar: 'path'
             }
-
         ]
     }
 ];
@@ -124,10 +124,22 @@ const store = {
     removeEventListener(callback){
         this.off(EVENT, callback);
     },
-    deleteTask(taskId, e){
-        e.preventDefault();
-        tasks.filter(item => item.id !== taskId);
-    }
+    deleteTask([taskId, event]){
+        event.preventDefault();
+        tasks = tasks.filter(item => item.id !== taskId);
+       // localStorage.setItem('tasks', JSON.stringify(tasks));
+    },
+    updateTask(editedTask){
+       // tasks = JSON.parse(localStorage.getItem('tasks'));
+        tasks = tasks.map( task => task.id === editedTask.id ? editedTask : task );
+        //localStorage.setItem('tasks', JSON.stringify(tasks));
+    },
+    addNewTask(newTask){
+       // tasks = JSON.parse(localStorage.getItem('tasks'));
+        tasks = ([newTask, ...tasks]);
+        //localStorage.setItem('tasks', JSON.stringify(tasks));
+    },
 
 };
-export default store
+
+export default store;

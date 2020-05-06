@@ -3,8 +3,7 @@ import React, {useState, useEffect} from 'react';
 import Header from "../Header/header.jsx";
 import Nav from "../Navigation/navigation.jsx";
 import Content from "../Content/Content.jsx";
-
-
+/*
  let tasks = [
         {
             id: 1,
@@ -112,15 +111,15 @@ import Content from "../Content/Content.jsx";
         }
     ];
 
-
+*/
 
 
 const App = () => {
 
-    const [taskList, changeTaskList] = useState(tasks);
+    //*const [taskList, changeTaskList] = useState(tasks);
 
 
-    const fromLS = () => {
+   /* const fromLS = () => {
         localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')))
     };
 
@@ -140,8 +139,8 @@ const App = () => {
     useEffect(() => {
             if(
                 localStorage.getItem('tasks')){
-                fromLS();
-                //console.log('data from LS');
+                localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')))
+                console.log('data from LS');
             }
         },
         []
@@ -151,16 +150,12 @@ const App = () => {
         localStorage.setItem('tasks', JSON.stringify(taskList));
         //console.log('data to LS');
     });
-
+*/
     return (
         <>
-            <Header/>
-            <Nav addNewTask={ addNewTask }/>
-            <Content
-               // tasks={ taskList }
-                removeTask= { deleteTask }
-                contentEditTask = { updateTask }
-            />
+            <Header />
+            <Nav />
+            <Content />
         </>
     );
 

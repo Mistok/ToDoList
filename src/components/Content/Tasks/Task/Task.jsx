@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 
 import style from './task.module.scss'
 import { faClock, faMapMarkedAlt, faCalendar, faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { keyframes } from 'styled-components';
 import { fadeInUp } from 'react-animations';
 import NewTask from "../../../NewTask/NewTask.jsx";
+import {removeTask} from "../../../../actions/actions";
+import dispatcher from '../../../../dispatcher/dispatcher';
 
 const FadeInUp = styled.div`animation: 2s ${keyframes`${fadeInUp}`} `;
 
@@ -16,27 +18,19 @@ const Task = (props) => {
     // handleChange left for prevent default action
     const handleChange = (e) =>{
         e.preventDefault();
-        changeIsEdit(!isEdit);
+        changeIsEdit(true);
     };
-
-    const updateTask = (newTask, e) => {
-        e.preventDefault();
-        changeIsEdit(!isEdit);
-        props.editTask(newTask)
-    };
-
+    useEffect(()=>{
+        changeIsEdit(false);
+    },[props.task]);
     // styles
     const stylesMap = style.task_feature_icon + ' ' + style.map;
     const stylesCalendar = style.task_feature_icon + ' ' + style.calendar;
     const stylesTime = style.task_feature_icon + ' ' + style.time;
 
-
     // parsing props task features
     const {id, author, date, time, title, location, text, friends} = props.task;
 
-    const remove = (id, e) =>{
-        props.removeTask(id, e);
-    };
     return(
 
     <FadeInUp>
@@ -46,7 +40,6 @@ const Task = (props) => {
                 isEdit ? (
                     <NewTask
                         task = {{id, author, date, time, title, location, text, friends }}
-                        addNewTask = {updateTask}
                     />
                 ) : (
             <>
@@ -57,7 +50,7 @@ const Task = (props) => {
                </div>
                <div className={style.task_header_right}>
                    <a onClick={(e)=> {handleChange(e)}} href="#" className={style.task_delete_icon}><FontAwesomeIcon icon={faEdit}/></a>
-                   <a onClick={(e)=> {remove(id, e)}} href="#"><FontAwesomeIcon icon={faTrashAlt}/></a>
+                   <a onClick={(e)=> {removeTask(id,e)}} href="#"><FontAwesomeIcon icon={faTrashAlt}/></a>
                </div>
            </div>
 
