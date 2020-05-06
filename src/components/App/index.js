@@ -4,6 +4,7 @@ import Header from "../Header/header.jsx";
 import Nav from "../Navigation/navigation.jsx";
 import Content from "../Content/Content.jsx";
 
+
  let tasks = [
         {
             id: 1,
@@ -156,7 +157,7 @@ const App = () => {
             <Header/>
             <Nav addNewTask={ addNewTask }/>
             <Content
-                tasks={ taskList }
+               // tasks={ taskList }
                 removeTask= { deleteTask }
                 contentEditTask = { updateTask }
             />
