@@ -7,7 +7,7 @@ import styled, { keyframes } from 'styled-components';
 import { fadeInUp } from 'react-animations';
 import NewTask from "../../../NewTask/NewTask.jsx";
 import {removeTask} from "../../../../actions/actions";
-import dispatcher from '../../../../dispatcher/dispatcher';
+
 
 const FadeInUp = styled.div`animation: 2s ${keyframes`${fadeInUp}`} `;
 
@@ -20,9 +20,11 @@ const Task = (props) => {
         e.preventDefault();
         changeIsEdit(true);
     };
+
     useEffect(()=>{
         changeIsEdit(false);
     },[props.task]);
+
     // styles
     const stylesMap = style.task_feature_icon + ' ' + style.map;
     const stylesCalendar = style.task_feature_icon + ' ' + style.calendar;

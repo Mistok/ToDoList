@@ -23,22 +23,23 @@ const Tasks = (props) => {
     useEffect(() => {
             if(
                 localStorage.getItem('tasks')){
-                localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')))
+                localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')));
                 console.log('data from LS');
             }
         },
         []
     );
-    const {tasks, removeTask, tasksEditTask} = taskList;
 
     return(
         <div className="content_wrapper">
 
            { taskList.map( task => (
+               <FadeOutDown>
                <Task
                    task = {task}
                    key = {task.id}
-                   />) )
+               />
+               </FadeOutDown>) )
            }
 
         </div>

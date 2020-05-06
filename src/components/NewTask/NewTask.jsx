@@ -14,7 +14,7 @@ const NewTask = (props) => {
 
     // имитация стейта для использования в хуке
     let mockupTask = {
-        id: props.task.id || '',
+        id: props.task.id || Date.now(),
         author: 'Roger Bridges',
         date: props.task.date || '',
         time: props.task.time || '',
@@ -78,8 +78,9 @@ const NewTask = (props) => {
     const {id, author, location, date, time, title, text} = newTask;
 
     return(
-        <SlideInDown>
+
             <div className={style.formContainer}>
+                <SlideInDown>
                 <form onSubmit={handleSubmit} className={style.add_task_form} action="#">
                     <label htmlFor="add_title" className={style.add_title}>
                         <span>Task title</span>
@@ -122,8 +123,9 @@ const NewTask = (props) => {
                         </div>
                     </div>
                 </form>
+                </SlideInDown>
             </div>
-        </SlideInDown>
+
     )
 };
 export default NewTask;
