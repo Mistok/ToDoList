@@ -16,19 +16,25 @@ const Tasks = (props) => {
     };
     useEffect(()=>{
         store.addEventListener(callbackForEmit);
+        if(
+            localStorage.getItem('tasks')){
+            localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')));
+            // console.log('data from LocalStorage');
+        }
         return ()=>{
             store.removeEventListener(callbackForEmit);
         }
     }, []);
-    useEffect(() => {
-            if(
-                localStorage.getItem('tasks')){
-                localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')));
-                console.log('data from LS');
-            }
-        },
-        []
-    );
+    //
+    // useEffect(() => {
+    //         if(
+    //             localStorage.getItem('tasks')){
+    //             localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')));
+    //             console.log('data from LS');
+    //         }
+    //     },
+    //     []
+    // );
 
     return(
         <div className="content_wrapper">

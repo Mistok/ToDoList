@@ -25,6 +25,8 @@ const Task = (props) => {
         changeIsEdit(false);
     },[props.task]);
 
+
+
     // styles
     const stylesMap = style.task_feature_icon + ' ' + style.map;
     const stylesCalendar = style.task_feature_icon + ' ' + style.calendar;

@@ -7,17 +7,15 @@ export const removeTask = (id,e) =>{
         event: e
     })
 };
-export const updateTask = (task,e) =>{
+export const updateTask = (task) =>{
     dispatcher.dispatch({
         type: 'UPDATE',
         payload: task,
-        event: e
     })
 };
-export const addTask = (task,e) =>{
+export const addTask = (task) =>{
     dispatcher.dispatch({
         type: 'ADD',
         payload: task,
-        event: e
     })
 };
