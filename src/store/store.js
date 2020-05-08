@@ -130,12 +130,10 @@ const store = {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     },
     updateTask(editedTask){
-       // tasks = JSON.parse(localStorage.getItem('tasks'));
         tasks = tasks.map( task => task.id === editedTask.id ? editedTask : task );
         localStorage.setItem('tasks', JSON.stringify(tasks));
     },
     addNewTask(newTask){
-       // tasks = JSON.parse(localStorage.getItem('tasks'));
         tasks = ([newTask, ...tasks]);
         localStorage.setItem('tasks', JSON.stringify(tasks));
     },

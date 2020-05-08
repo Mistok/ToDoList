@@ -3,8 +3,8 @@ import Task from "./Task/Task.jsx";
 import styled, { keyframes } from 'styled-components';
 import { fadeOutDown } from 'react-animations';
 
-import store from "../../../store/store"
-
+import store from "../../../store/store";
+import {showMore} from "../../../actions";
 const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`} `;
 
 
@@ -44,7 +44,8 @@ const Tasks = (props) => {
                <Task
                    task = {task}
                    key = {task.id}
-               />
+                />
+               <button className={show_more_btn} onClick={showMore}>Show more!</button>
                </FadeOutDown>) )
            }
 
