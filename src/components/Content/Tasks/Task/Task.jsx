@@ -1,17 +1,18 @@
 import React, {useEffect, useState} from 'react'
+import {connect} from 'react-redux';
 
 import style from './task.module.scss'
 import { faClock, faMapMarkedAlt, faCalendar, faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { keyframes } from 'styled-components';
 import { fadeInUp } from 'react-animations';
+
 import NewTask from "../../../NewTask/NewTask.jsx";
 import {removeTask} from "../../../../actions/actions";
 
-
 const FadeInUp = styled.div`animation: 2s ${keyframes`${fadeInUp}`} `;
 
-const Task = (props) => {
+const Task = ({task, removeTask}) => {
 
     const [isEdit, changeIsEdit] = useState(false);
 
@@ -23,9 +24,7 @@ const Task = (props) => {
 
     useEffect(()=>{
         changeIsEdit(false);
-    },[props.task]);
-
-
+    },[task]);
 
     // styles
     const stylesMap = style.task_feature_icon + ' ' + style.map;
@@ -33,7 +32,7 @@ const Task = (props) => {
     const stylesTime = style.task_feature_icon + ' ' + style.time;
 
     // parsing props task features
-    const {id, author, date, time, title, location, text, friends} = props.task;
+    const {id, author, date, time, title, location, text, friends} = task;
 
     return(
 
@@ -98,4 +97,4 @@ const Task = (props) => {
     )
 };
 
-export default Task;
+export default connect(null, {removeTask})(Task);

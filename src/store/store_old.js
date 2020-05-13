@@ -110,7 +110,7 @@ let tasks = [
     }
 ];
 
-const store = {
+const store_old = {
     ...EventEmitter.prototype,
     getStore () {
         return tasks;
@@ -140,4 +140,4 @@ const store = {
 
 };
 
-export default store;
+export default store_old;

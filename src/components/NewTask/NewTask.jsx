@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import style from './newTask.scss'
+import {connect} from 'react-redux';
 
 import { slideInDown } from 'react-animations';
 
@@ -57,12 +58,12 @@ const NewTask = (props) => {
 
 
         if(props.task){
-            updateTask(newTask);
+            props.updateTask(newTask);
             //clearForm();
         } else {
             // если мы создаем новую таску, то добавляем ID
             setNewTask({...newTask, id: Date.now()});
-            addTask(newTask)
+            props.addTask(newTask)
         }
         clearForm()
     };
@@ -128,5 +129,5 @@ const NewTask = (props) => {
 
     )
 };
-export default NewTask;
+export default connect(null, {addTask, updateTask})(NewTask);
 

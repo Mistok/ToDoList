@@ -1,24 +1,24 @@
 import {Dispatcher} from 'flux';
-import store from '../store/store'
+import store_old from '../store/store_old'
 
 const dispatcher = new Dispatcher();
 
 dispatcher.register((action) => {
     switch (action.type) {
         case 'REMOVE': {
-            store.deleteTask([action.payload, action.event]);
+            store_old.deleteTask([action.payload, action.event]);
             break
         }
         case 'UPDATE': {
-            store.updateTask(action.payload);
+            store_old.updateTask(action.payload);
             break
         }
         case 'ADD' : {
-            store.addNewTask(action.payload);
+            store_old.addNewTask(action.payload);
             break
         }
     }
-    store.emitStore()
+    store_old.emitStore()
 });
 
 export default dispatcher;
