@@ -5,42 +5,31 @@ import { fadeOutDown } from 'react-animations';
 
 import { connect } from 'react-redux';
 
-// import store_old from "../../../store_old/store_old";
 import {showMore} from "../../../actions/actions";
 const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`} `;
 
 
 const Tasks = (props) => {
-    //
-    // const [taskList, changeTaskList] = useState(store_old.getStore());
-    // const callbackForEmit = () =>{
-    //     changeTaskList(store_old.getStore())
-    // };
-    // useEffect(()=>{
-    //     store_old.addEventListener(callbackForEmit);
-    //     if(
-    //         localStorage.getItem('tasks')){
-    //         localStorage.getItem('tasks') && changeTaskList( JSON.parse(localStorage.getItem('tasks')));
-    //         // console.log('data from LocalStorage');
-    //     }
-    //     return ()=>{
-    //         store_old.removeEventListener(callbackForEmit);
-    //     }
-    // }, []);
-    //
-    useEffect(() => {
-            if( localStorage.getItem('tasks')){
-                props = JSON.parse(localStorage.getItem('tasks'));
-                console.log('data from LS');
-            }
-        },
-        []
-    );
+
+    let [taskList, changeTasklist ]= useState(props.taskList); // локальный стейт, для взятия из LocalStorage
+
+    // useEffect(() => {
+    //         if( localStorage.getItem('tasks')){
+    //             changeTasklist(
+    //                 taskList = JSON.parse(localStorage.getItem('tasks'))
+    //             );
+    //             console.log('data from LS');
+    //         }
+    //     },
+    //     []
+    // );
 
     return(
+
         <div className="content_wrapper">
 
            { props.taskList.map( task => (
+
                <FadeOutDown>
                <Task
                    task = {task}
