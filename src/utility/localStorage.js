@@ -1,6 +1,6 @@
 export const loadState = () => {
     const serializedState = localStorage.getItem('tasks');
-    debugger;
+
     if(serializedState === null) {
         return undefined
     }

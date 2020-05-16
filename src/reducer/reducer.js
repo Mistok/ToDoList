@@ -126,8 +126,13 @@ const  reducer = (store = [...defaultData], action) => {
             return store;
             break
         }
-        case 'CLEAR' : {
+        case 'SHOW_MORE' : {
+            store = store.map();
             return []
+        }
+        case 'FILTER' : {
+
+            return store;
         }
         default: {
             return store

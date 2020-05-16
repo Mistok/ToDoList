@@ -1,6 +1,5 @@
-import dispatcher from "../dispatcher/dispatcher";
 
- /* ----------------------------------------*/
+
 
 export const removeTask = (id,e) => (
    {
@@ -21,8 +20,9 @@ export const addTask = (task) =>(
         payload: task,
     }
 );
-export const showMore = () =>(
+export const showMore = (limit) =>(
     {
-        type: 'SHOW_MORE'
+        type: 'SHOW_MORE',
+        payload: limit,
     }
 );

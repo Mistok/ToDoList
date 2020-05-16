@@ -1,13 +1,16 @@
 import {createStore} from "redux";
 import reducer from '../reducer/reducer';
 import {loadState, saveState} from '../utility/localStorage';
-debugger
-let previousTasks = loadState();
 
-const store = createStore(reducer, previousTasks);
-console.log(store)
+// get tasks from LocalStorage
+let serializedTasks = loadState();
+
+const store = createStore(reducer, serializedTasks);
+
+// setting changes to LocalStorage
 store.subscribe(()=>{
     saveState(store.getState())
 });
+
 export default store;
 

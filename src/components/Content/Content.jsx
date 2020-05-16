@@ -15,7 +15,7 @@ const Content = (props) => {
             <div className="container">
                 <div className={style.content_container}>
                     <div className={style.content_calendar}>
-                        <Calendar style={styles} width='420px' />
+                        <Calendar style={styles}  />
                     </div>
 
                     <div className={style.content_tasks}>

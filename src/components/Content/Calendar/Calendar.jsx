@@ -15,9 +15,7 @@ class Calendar extends React.Component{
 
     constructor(props) {
         super(props);
-        this.width = props.width || "400px";
-        this.style = props.style || {};
-        this.style.width = this.width; // add this
+
     }
 
 
@@ -203,7 +201,6 @@ class Calendar extends React.Component{
             );
         }
 
-        //console.log("days: ", daysInMonth);
 
         var totalSlots = [...blanks, ...daysInMonth];
         let rows = [];
