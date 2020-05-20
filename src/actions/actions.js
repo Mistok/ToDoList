@@ -20,9 +20,9 @@ export const addTask = (task) =>(
         payload: task,
     }
 );
-export const showMore = (limit) =>(
-    {
-        type: 'SHOW_MORE',
-        payload: limit,
-    }
-);
+// export const showMore = (limit) =>(
+//     {
+//         type: 'SHOW_MORE',
+//         payload: limit,
+//     }
+// );

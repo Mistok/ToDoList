@@ -1,0 +1,29 @@
+@import "../../Static/variables.scss";
+
+.logForm{
+  display: inline-flex;
+  height: 300px;
+  width: 500px;
+  align-self: center;
+  margin: auto;
+  border: 2px solid crimson;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+label{
+  display: block;
+  color: $red;
+  font-size: 20px;
+}
+input{
+  padding: 10px 20px;
+  background-color: $greyText;
+  color: $white;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: none;
+}

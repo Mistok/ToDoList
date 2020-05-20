@@ -21,17 +21,25 @@ nav{
     white-space: nowrap;
     color: $greyText;
     padding: 5px ;
+    border: 1px solid transparent;
+    text-align: center;
+    transition: .5s;
+    border-radius: 5px;
 }
 .nav_item:last-child{
     margin-right: 10px;
 }
-.nav_item:hover{
-    //outline: 1px solid crimson;
+.nav_item:hover {
+    border: 1px solid $red;
+    .nav_item_name{
+        color: $red;
+    }
+
 }
 .nav_item_name{
     display: inline-block;
     font-size: 14px;
-    margin-right: 15px;
+    //margin-right: 15px;
 }
 .nav_item_count{
     display: inline-block;

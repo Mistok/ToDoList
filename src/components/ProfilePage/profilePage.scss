@@ -1,0 +1,21 @@
+@import "../../Static/variables.scss";
+
+.profile_container{
+  display: inline-flex;
+  height: 300px;
+  width: 200px;
+  align-self: center;
+  margin: auto;
+  border: 2px solid $green;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  span{
+    margin-left: 20px;
+    font-size: 20px;
+    color: $greyText;
+    text-decoration: underline;
+  }
+}

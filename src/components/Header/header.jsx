@@ -1,7 +1,7 @@
 
 import React from 'react';
 import style from './header.scss';
-
+import {Link} from 'react-router-dom'
 const Header = () => {
     return(<header>
             <div className='container'>
@@ -11,7 +11,11 @@ const Header = () => {
                     </div>
                     <div className={style.menu}>
                         <input className={style.search_field}  type="text" onClick={console}/>
-                        <img className={style.profile_ava}  src="../../../assets/ava.png" alt="ava"/>
+                        <Link to='/registration'>Registration</Link>
+                        <Link to='/profile'>
+                            <img className={style.profile_ava}  src="../../../assets/ava.png" alt="ava"/>
+                        </Link>
+
                     </div>
                 </div>
             </div>

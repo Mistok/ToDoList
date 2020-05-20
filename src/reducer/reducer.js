@@ -108,7 +108,6 @@ const defaultData = [
 const  reducer = (store = [...defaultData], action) => {
     switch (action.type) {
         case 'REMOVE': {
-            event.preventDefault();
             store = store.filter(item => item.id !== action.payload);
             //localStorage.setItem('tasks', JSON.stringify(store));
             return store;
@@ -125,14 +124,6 @@ const  reducer = (store = [...defaultData], action) => {
            // localStorage.setItem('tasks', JSON.stringify(store));
             return store;
             break
-        }
-        case 'SHOW_MORE' : {
-            store = store.map();
-            return []
-        }
-        case 'FILTER' : {
-
-            return store;
         }
         default: {
             return store

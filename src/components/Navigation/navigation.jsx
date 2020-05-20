@@ -20,16 +20,16 @@ const Nav = (props) => {
                 <div className={style.nav_wrapper}>
                     <div className={style.nav_panel}>
                         <a href='#' title='nav-link' className={style.nav_item}>
-                            <span className={style.nav_item_name}> Today</span>
-                            <span className={style.nav_item_count}>3</span>
+                            <span className={style.nav_item_name}>All tasks</span>
+                            {/*<span className={style.nav_item_count}>3</span>*/}
                         </a>
                         <a href='#' title='nav-link' className={style.nav_item}>
-                            <span className={style.nav_item_name}>Sheduled Events</span>
-                            <span className={style.nav_item_count}>5</span>
+                            <span className={style.nav_item_name}>Passed</span>
+                            {/*<span className={style.nav_item_count}>5</span>*/}
                         </a>
                         <a href='#' title='nav-link' className={style.nav_item}>
-                            <span className={style.nav_item_name}>New checking</span>
-                            <span className={style.nav_item_count}>2</span>
+                            <span className={style.nav_item_name}>Sheduled</span>
+                            {/*<span className={style.nav_item_count}>2</span>*/}
                         </a>
                     </div>
                     <div className='dvs'>
