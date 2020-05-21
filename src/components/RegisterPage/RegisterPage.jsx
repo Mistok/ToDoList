@@ -7,13 +7,13 @@ const RegisterPage = () => {
                 <form className={style.logForm} action="#">
                     <label htmlFor="email">
                         <div>Email</div>
-                        <input type="email" id='email' placeholder='Login'/>
+                        <input type="email" id='email' placeholder='email@mail.com'/>
                     </label>
                     <label htmlFor="password">
                         <div>Password</div>
-                        <input type="password" id='password' placeholder='password'/>
+                        <input type="password" id='password' placeholder='****'/>
                     </label>
-                    <input type="submit" />
+                    <input type="submit" value='Submit' />
                 </form>
             </div>
         </section>

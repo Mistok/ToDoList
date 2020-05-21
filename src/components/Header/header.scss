@@ -13,7 +13,8 @@ header{
 .menu{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 .search_field{
     border: none;
@@ -31,9 +32,19 @@ header{
         background-position:  right -20px center;
     }
 }
+.register_link{
+    color: $white;
 
+}
 .profile_ava{
     width: 34px;
     height: 34px;
     border-radius: 50%;
+}
+.register_link{
+    margin-right: 20px;
+    text-decoration: none;
+}
+.active_link{
+    outline: 1px solid $blue;
 }
