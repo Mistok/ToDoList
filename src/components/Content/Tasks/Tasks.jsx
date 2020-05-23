@@ -5,7 +5,6 @@ import { fadeOutDown } from 'react-animations';
 import style from './tasks.module.scss';
 import { connect } from 'react-redux';
 
-import {showMore} from "../../../actions/actions";
 const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`} `;
 
 const Tasks = (props) => {
@@ -21,12 +20,12 @@ const Tasks = (props) => {
         <div className="content_wrapper">
 
             { shownTasks.map( task => (
-                <FadeOutDown>
+
                     <Task
                         task = {task}
                         key = {task.id}
                     />
-                </FadeOutDown>) )
+) )
             }
             <button className={style.explore}
                     onClick={showMore}>

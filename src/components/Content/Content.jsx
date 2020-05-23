@@ -12,7 +12,7 @@ const styles = {
 
 const Content = () => {
     const params = useParams();
-    console.log(params);
+
     return(
 
         <div className={style.content_wrapper}>
