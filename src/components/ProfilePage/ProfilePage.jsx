@@ -1,8 +1,14 @@
 import React from 'react';
 import style from './profilePage.scss';
+import {fadeInDownBig} from "react-animations";
+import styled, { keyframes } from 'styled-components';
+
 
 const ProfilePage = () => {
-    return(<section>
+
+    const FadeInDownBig= styled.div`animation: .75s ${keyframes`${fadeInDownBig}`} `;
+    return(<FadeInDownBig>
+        <section>
             <div className='container'>
                <div className={style.profile_container}>
                    <div className={style.profile_header}>
@@ -39,7 +45,7 @@ const ProfilePage = () => {
                </div>
             </div>
         </section>
-
+        </FadeInDownBig>
     )
 };
 export default ProfilePage;

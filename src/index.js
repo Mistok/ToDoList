@@ -6,16 +6,20 @@ import store from './store/storeRedux';
 import './index.css';
 import App from './components/App';
 import {HashRouter as Router, Route, } from 'react-router-dom';
-import Tasks from "./components/Content/Tasks/tasks.jsx";
 import Header from "./components/Header/header.jsx";
 import RegisterPage from "./components/RegisterPage/RegisterPage.jsx";
 import ProfilePage from "./components/ProfilePage/ProfilePage.jsx";
+import Content from "./components/Content/Content.jsx";
+
+
 
 ReactDOM.render(
     <Provider store={store}>
         <Router>
             <Header/>
             <Route path='/' exact component={App}/>
+            <Route path='/tasks' exact component={Content}/>
+            <Route path='/tasks/:taskId' exact component={Content}/>
             <Route path='/registration' exact component={RegisterPage}/>
             <Route path='/profile' exact component={ProfilePage}/>
         </Router>

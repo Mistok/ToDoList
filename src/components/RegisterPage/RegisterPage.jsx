@@ -1,8 +1,13 @@
 import React from 'react';
 import style from './registerPage.scss';
+import {fadeInDownBig} from "react-animations";
+import styled, { keyframes } from 'styled-components';
 
 const RegisterPage = () => {
-    return(<section>
+
+    const FadeInDownBig= styled.div`animation: .75s ${keyframes`${fadeInDownBig}`} `;
+    return(<FadeInDownBig>
+            <section>
             <div className='container'>
                 <form className={style.logForm} action="#">
                     <label htmlFor="email">
@@ -17,7 +22,7 @@ const RegisterPage = () => {
                 </form>
             </div>
         </section>
-
+        </FadeInDownBig>
     )
 };
 export default RegisterPage;

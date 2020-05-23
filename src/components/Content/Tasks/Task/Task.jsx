@@ -6,7 +6,7 @@ import { faClock, faMapMarkedAlt, faCalendar, faEdit, faTrashAlt } from "@fortaw
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { keyframes } from 'styled-components';
 import { fadeInUp } from 'react-animations';
-
+import {NavLink} from 'react-router-dom';
 import NewTask from "../../../NewTask/NewTask.jsx";
 import {removeTask} from "../../../../actions/actions";
 
@@ -72,7 +72,7 @@ const Task = ({task, removeTask}) => {
                 </div>
             </div>
             <div className={style.task_description}>
-                <h1 className={style.task_description_title}>{title}</h1>
+                <NavLink to={`/tasks/${id}`}><h1 className={style.task_description_title}>{title}</h1></NavLink>
                 <p className={style.task_description_text}>{text}</p>
             </div>
             <div className={style.task_friends}>

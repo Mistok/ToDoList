@@ -2,17 +2,21 @@ import React from 'react'
 import Calendar from "./Calendar/Calendar.jsx";
 import Tasks from "./Tasks/Tasks.jsx";
 import style from './content.module.scss';
+import Nav from "../Navigation/navigation.jsx";
+import {useParams} from 'react-router-dom';
 
 const styles = {
     position: 'relative',
     margin: '50px auto'
 };
 
-const Content = (props) => {
-
+const Content = () => {
+    const params = useParams();
+    console.log(params);
     return(
         <div className={style.content_wrapper}>
             <div className="container">
+
                 <div className={style.content_container}>
                     <div className={style.content_calendar}>
                         <Calendar style={styles}  />

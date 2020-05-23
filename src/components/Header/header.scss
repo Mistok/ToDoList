@@ -16,6 +16,16 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+.logo_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span{
+        color: $white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+}
 .search_field{
     border: none;
     border-radius: 12px;
@@ -34,7 +44,6 @@ header{
 }
 .register_link{
     color: $white;
-
 }
 .profile_ava{
     width: 34px;
