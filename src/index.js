@@ -10,7 +10,7 @@ import Header from "./components/Header/header.jsx";
 import RegisterPage from "./components/RegisterPage/RegisterPage.jsx";
 import ProfilePage from "./components/ProfilePage/ProfilePage.jsx";
 import Content from "./components/Content/Content.jsx";
-
+import SingleTask from "./components/SingleTask/SingleTask.jsx"
 
 
 ReactDOM.render(
@@ -19,7 +19,7 @@ ReactDOM.render(
             <Header/>
             <Route path='/' exact component={App}/>
             <Route path='/tasks' exact component={Content}/>
-            <Route path='/tasks/:taskId' exact component={Content}/>
+            <Route path='/tasks/:taskId' exact component={SingleTask}/>
             <Route path='/registration' exact component={RegisterPage}/>
             <Route path='/profile' exact component={ProfilePage}/>
         </Router>

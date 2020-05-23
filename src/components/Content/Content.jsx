@@ -14,7 +14,9 @@ const Content = () => {
     const params = useParams();
     console.log(params);
     return(
+
         <div className={style.content_wrapper}>
+            <Nav/>
             <div className="container">
 
                 <div className={style.content_container}>
