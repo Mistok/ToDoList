@@ -105,7 +105,7 @@ const defaultData = [
     }
 ];
 
-const  reducer = (store = [...defaultData], action) => {
+const  reducer = (store = defaultData, action) => {
     switch (action.type) {
         case 'REMOVE': {
             store = store.filter(item => item.id !== action.payload);
