@@ -33,7 +33,7 @@ const NewTask = (props) => {
     // очистка формы
     const clearForm = () => {
         setNewTask({
-            id: '0',
+            id: Date.now(),
             author: 'Roger Bridges',
             date: ':',
             time: '',
