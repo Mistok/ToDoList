@@ -20,9 +20,15 @@ export const addTask = (task) =>(
         payload: task,
     }
 );
-// export const showMore = (limit) =>(
-//     {
-//         type: 'SHOW_MORE',
-//         payload: limit,
-//     }
-// );
+export const filterToday = (filter) =>(
+    {
+        type: 'FILTER',
+        payload: filter,
+    }
+);
+export const filterDate = (filter) =>(
+    {
+        type: 'DATE',
+        payload: filter,
+    }
+);

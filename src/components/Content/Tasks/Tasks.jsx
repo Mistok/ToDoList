@@ -8,12 +8,13 @@ import { connect } from 'react-redux';
 const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`} `;
 
 const Tasks = (props) => {
+
     let [shownCount, changeShownCount ] = useState(2); // локальная переменная, отображает сколько заданий показывать, по умолчанию 2
     const showMore = () =>  shownCount < props.taskList.length ? changeShownCount(shownCount +=2): null; // показать еще заданий
 
     let shownTasks = [...props.taskList]; //
     shownTasks.length = shownCount;
-
+    debugger
 
     const secondSpanStyles = `${style.icon_right} + ${style.after}`; //Объеденяю стили
     return(
@@ -41,6 +42,6 @@ const Tasks = (props) => {
 };
 
 export default connect(store => ({
-         taskList: store
+         taskList: store.tasks
     })
 )(Tasks);
