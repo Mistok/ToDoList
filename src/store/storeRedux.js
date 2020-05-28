@@ -10,7 +10,7 @@ let combinedReducer = combineReducers({ tasks: tasks_reducer ,  filter: filters_
 
 const store = createStore(combinedReducer, serializedTasks); // создаю из объедененного редюсера стор
 
-console.log(store.getState());
+
 
 // setting changes to LocalStorage
 

@@ -14,7 +14,6 @@ const Tasks = (props) => {
 
     let shownTasks = [...props.taskList]; //
     shownTasks.length = shownCount;
-    debugger
 
     const secondSpanStyles = `${style.icon_right} + ${style.after}`; //Объеденяю стили
     return(
@@ -22,10 +21,10 @@ const Tasks = (props) => {
 
             { shownTasks.map( task => (
 
-                    <Task
-                        task = {task}
-                        key = {task.id}
-                    />
+                <Task
+                    task = {task}
+                    key = {task.id}
+                />
 ) )
             }
             <button className={style.explore}

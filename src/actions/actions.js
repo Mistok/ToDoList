@@ -1,5 +1,6 @@
 
 
+/* TaskList actions */
 
 export const removeTask = (id,e) => (
    {
@@ -20,9 +21,30 @@ export const addTask = (task) =>(
         payload: task,
     }
 );
+
+/* Filter actions */
+
 export const filterToday = (filter) =>(
     {
-        type: 'FILTER',
+        type: 'TODAY',
+        payload: filter,
+    }
+);
+export const filterPass = (filter) =>(
+    {
+        type: 'PASS',
+        payload: filter,
+    }
+);
+export const filterScheduled = (filter) =>(
+    {
+        type: 'SCHEDULED',
+        payload: filter,
+    }
+);
+export const filterAll = (filter) =>(
+    {
+        type: 'ALL',
         payload: filter,
     }
 );
