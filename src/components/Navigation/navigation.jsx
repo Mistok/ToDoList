@@ -14,19 +14,19 @@ const Nav = (props) => {
         e.preventDefault();
 
         console.log(e.currentTarget.dataset.filter);
-        console.log(props.filter)
+        console.log(props.filter);
         switch (e.currentTarget.dataset.filter) {
             case 'all':
                 props.filterAll('ALL');
                 break;
             case 'passed':
-                props.filterPass('PASS');
+                props.filterPass('PASSED');
                 break;
             case 'scheduled':
-                props.filterPass('SCHEDULED');
+                props.filterScheduled('SCHEDULED');
                 break;
             case 'today':
-                props.filterPass('TODAY');
+                props.filterToday('TODAY');
                 break;
         }
 
