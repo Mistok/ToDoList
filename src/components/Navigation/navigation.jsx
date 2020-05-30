@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import style from './navigation.scss'
 import NewTask from "../NewTask/NewTask.jsx";
 import { connect } from 'react-redux';
-import {filterToday, filterPass, filterScheduled, filterAll} from '../../actions/actions.js'
+import {setFilter} from '../../actions/actions.js'
 
 const Nav = (props) => {
 
@@ -13,23 +13,11 @@ const Nav = (props) => {
     const filterHandle = (e) =>{
         e.preventDefault();
 
-        console.log(e.currentTarget.dataset.filter);
-        console.log(props.filter);
-        switch (e.currentTarget.dataset.filter) {
-            case 'all':
-                props.filterAll('ALL');
-                break;
-            case 'passed':
-                props.filterPass('PASSED');
-                break;
-            case 'scheduled':
-                props.filterScheduled('SCHEDULED');
-                break;
-            case 'today':
-                props.filterToday('TODAY');
-                break;
-        }
+        // console.log(e.currentTarget.dataset.filter);
+        // console.log(props.filter);
 
+        props.setFilter(e.currentTarget.dataset.filter);
+        console.log(props)
     };
     
     const newTaskToggler = (event) => {
@@ -71,4 +59,4 @@ const Nav = (props) => {
 
 };
 
-export default connect(store => ({taskList: store.tasks, filter: store.filter}), {filterToday, filterPass, filterScheduled, filterAll })(Nav);
+export default connect(store => ({taskList: store.tasks, filter: store.filter}), {setFilter})(Nav);

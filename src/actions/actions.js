@@ -24,33 +24,9 @@ export const addTask = (task) =>(
 
 /* Filter actions */
 
-export const filterToday = (filter) =>(
+export const setFilter = (filter) =>(
     {
-        type: 'TODAY',
-        payload: filter,
-    }
-);
-export const filterPass = (filter) =>(
-    {
-        type: 'PASS',
-        payload: filter,
-    }
-);
-export const filterScheduled = (filter) =>(
-    {
-        type: 'SCHEDULED',
-        payload: filter,
-    }
-);
-export const filterAll = (filter) =>(
-    {
-        type: 'ALL',
-        payload: filter,
-    }
-);
-export const filterDate = (filter) =>(
-    {
-        type: 'DATE',
+        type: 'SET_FILTER',
         payload: filter,
     }
 );
