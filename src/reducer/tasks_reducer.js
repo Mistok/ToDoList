@@ -3,7 +3,7 @@ const defaultData = [
         {
             id: 1,
             author: 'Roger Bridges',
-            date: '',
+            date: '2020-06-04',
             time: '06:00',
             title: 'Training - Excercises',
             location: 'Sport Life',
@@ -31,7 +31,7 @@ const defaultData = [
         {
             id: 2,
             author: 'Roger Bridges',
-            date: '',
+            date: '2020-06-04',
             time: '10:00',
             title: 'Lunch with partner',
             location: 'Mushlya cafe',
@@ -46,7 +46,7 @@ const defaultData = [
         {
             id: 3,
             author: 'Roger Bridges',
-            date: '',
+            date: '2020-06-02',
             time: '11:40',
             title: 'Work on Presentation for Conference',
             location: 'Office',
@@ -66,7 +66,7 @@ const defaultData = [
         {
             id: 4,
             author: 'Roger Bridges',
-            date: '',
+            date: '2020-06-02',
             time: '20:00',
             title: 'Adams birthday party',
             location: 'Adam`s house',
@@ -116,7 +116,7 @@ const  tasks_reducer = (store = defaultData, action) => {
            // localStorage.setItem('tasks', JSON.stringify(store));
             return store;
         }
-        case 'ADD' : {
+        case 'ADD': {
             store = ([action.payload, ...store]);
            // localStorage.setItem('tasks', JSON.stringify(store));
             return store;

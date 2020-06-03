@@ -10,37 +10,78 @@ const FadeOutDown = styled.div`animation: 2s ${keyframes`${fadeOutDown}`} `;
 const Tasks = (props) => {
 
     let [shownCount, changeShownCount ] = useState(2); // локальная переменная, отображает сколько заданий показывать, по умолчанию 2
+    //let [filtredList, changeFiltredList] = useState([]);
+
     const showMore = () =>  shownCount < props.taskList.length ? changeShownCount(shownCount +=2): null; // показать еще заданий
-    let filter = props.filter;
-    if( filter !== 'all' || filter !== false) {
+
+    let filter = props.filter.filter_type;
+    let filtredTaskList = [];
+    let filterFunction = () => {
         let today = new Date;
         let todayYear =  today.getFullYear();
-        let todayMonth = today.getMonth();
+        let todayMonth = today.getMonth()+1;
         let todayDay = today.getDay();
 
-        let filtredTaskList = [];
-
-        switch (filter) {
+        switch (filter.filter_type) {
             case 'today': {
 
+                props.taskList.forEach((task) => {
 
-                for (let task of props.taskList) {
-                    let taskDate =  task.date;
-                    let taskYear = taskDate.getFullYear();
-                    let taskMonth = taskDate.getMonth();
-                    let taskDay = taskDate.getDay();
-                    if(todayYear === taskYear && todayMonth === taskMonth && todayDay || taskDay){
+                    let taskDate = task.date;
+                    let taskYear = +taskDate.slice(0, 4);
+                    let taskMonth = +taskDate.slice(5, 7);
+                    let taskDay = +taskDate.slice(8, 10);
+
+                    if (todayYear === taskYear && todayMonth === taskMonth && todayDay === taskDay) {
                         filtredTaskList.push(task)
                     }
-                }
 
+                });
+
+                break
+            }
+            case 'passed':  {
+
+                props.taskList.forEach((task) => {
+
+                    let taskDate = task.date;
+                    let taskYear = +taskDate.slice(0, 4);
+                    let taskMonth = +taskDate.slice(5, 7);
+                    let taskDay = +taskDate.slice(8, 10);
+
+                    if (todayYear >= taskYear || todayMonth >= taskMonth || todayDay > taskDay) {
+                        filtredTaskList.push(task)
+                    }
+
+                });
+                break
+            }
+            case 'scheduled': {
+
+                props.taskList.forEach((task)=>{
+
+                    let taskDate =  task.date;
+                    let taskYear = +taskDate.slice(0,4);
+                    let taskMonth = +taskDate.slice(5,7);
+                    let taskDay = +taskDate.slice(8,10);
+
+                    if(todayYear <= taskYear || todayMonth <= taskMonth || todayDay <= taskDay){
+                        filtredTaskList.push(task)
+                    }
+
+                });
+                break
             }
         }
+
     }
-    let todayDay = new Date.getday();
-    console.log(todayDay);
-    let shownTasks = [...props.taskList]; //
-    shownTasks.length = shownCount;
+    if (filter !== 'all' || filter !== false){
+        filterFunction()
+    }
+
+    //changeFiltredList([...filtredTaskList]);
+    let shownTasks = filtredTaskList.length > 0 ? [...filtredTaskList] : [...props.taskList]; // отображаемые задания
+    shownTasks.length = shownCount; // применяем фильтр отображать по 2 задания
 
     const secondSpanStyles = `${style.icon_right} + ${style.after}`; //Объеденяю стили
     return(

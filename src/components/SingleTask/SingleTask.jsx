@@ -21,6 +21,6 @@ const SingleTask =  (props) =>{
 
 
 export default connect(store => ({
-        taskList: store
+        taskList: store.tasks
     })
 )(SingleTask);

@@ -56,7 +56,6 @@ const NewTask = (props) => {
         //     id: props.id ? props.id : Date.now()
         // };
 
-
         if(props.task){
             props.updateTask(newTask);
             //clearForm();
