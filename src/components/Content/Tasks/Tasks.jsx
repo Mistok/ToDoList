@@ -11,31 +11,31 @@ const Tasks = (props) => {
 
     let [shownCount, changeShownCount ] = useState(2); // локальная переменная, отображает сколько заданий показывать, по умолчанию 2
     //let [filtredList, changeFiltredList] = useState([]);
-
+    let  [filter, changeFilter] = useState(props.filter.filter_type);
     const showMore = () =>  shownCount < props.taskList.length ? changeShownCount(shownCount +=2): null; // показать еще заданий
 
-    let filter = props.filter.filter_type;
+    //let filter = props.filter.filter_type;
     let filtredTaskList = [];
-    let filterFunction = () => {
+    let filterFunction = (filter) => {
         let today = new Date;
         let todayYear =  today.getFullYear();
         let todayMonth = today.getMonth()+1;
         let todayDay = today.getDay();
 
-        switch (filter.filter_type) {
+        switch (filter) {
             case 'today': {
-
+                console.log('today filter is runnig');
                 props.taskList.forEach((task) => {
 
                     let taskDate = task.date;
                     let taskYear = +taskDate.slice(0, 4);
                     let taskMonth = +taskDate.slice(5, 7);
                     let taskDay = +taskDate.slice(8, 10);
-
+                    debugger
                     if (todayYear === taskYear && todayMonth === taskMonth && todayDay === taskDay) {
                         filtredTaskList.push(task)
                     }
-
+                    console.log(filtredTaskList)
                 });
 
                 break
@@ -74,9 +74,9 @@ const Tasks = (props) => {
             }
         }
 
-    }
+    };
     if (filter !== 'all' || filter !== false){
-        filterFunction()
+        filterFunction(filter)
     }
 
     //changeFiltredList([...filtredTaskList]);
