@@ -30,3 +30,13 @@ export const setFilter = (filter) =>(
         payload: filter,
     }
 );
+
+/* Return filtered task list */
+
+
+export const filteredTaskList = (filter) =>(
+    {
+        type: 'FILTER_TASK_LIST',
+        payload: filter,
+    }
+);
