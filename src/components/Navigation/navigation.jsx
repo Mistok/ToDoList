@@ -31,7 +31,7 @@ const Nav = (props) => {
             <div className='container'>
                 <div className={style.nav_wrapper}>
                     <div className={style.nav_panel}>
-                        <a href='#' onClick={(e)=>filterHandle(e)} data-filter="all" title='nav-link' className={style.nav_item}>
+                        <a href='#' onClick={filterHandle} data-filter="all" title='nav-link' className={style.nav_item}>
                             <span className={style.nav_item_name}>All tasks</span>
                             {/*<span className={style.nav_item_count}>3</span>*/}
                         </a>

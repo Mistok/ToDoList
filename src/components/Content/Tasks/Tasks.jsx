@@ -21,13 +21,14 @@ const Tasks = (props) => {
         let today = new Date;
         let todayYear =  today.getFullYear();
         let todayMonth = today.getMonth()+1;
-        let todayDay = today.getDay();
+        let todayDay = today.getDate();
 
         switch (filter) {
+
             case 'today': {
                 console.log('TODAY filter is runnig');
                 props.taskList.forEach((task) => {
-
+                    debugger
                     let taskDate = task.date;
                     let taskYear = +taskDate.slice(0, 4);
                     let taskMonth = +taskDate.slice(5, 7);
@@ -44,7 +45,7 @@ const Tasks = (props) => {
             case 'passed':  {
                 console.log('PASSED filter is runnig');
                 props.taskList.forEach((task) => {
-
+                    debugger
                     let taskDate = task.date;
                     let taskYear = +taskDate.slice(0, 4);
                     let taskMonth = +taskDate.slice(5, 7);
@@ -61,7 +62,7 @@ const Tasks = (props) => {
             case 'scheduled': {
                 console.log('SCHEDULED filter is runnig');
                 props.taskList.forEach((task)=>{
-
+                    debugger
                     let taskDate =  task.date;
                     let taskYear = +taskDate.slice(0,4);
                     let taskMonth = +taskDate.slice(5,7);
