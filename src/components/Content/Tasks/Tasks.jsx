@@ -22,6 +22,7 @@ const Tasks = (props) => {
         let todayYear =  today.getFullYear();
         let todayMonth = today.getMonth()+1;
         let todayDay = today.getDate();
+        let todayMilliseconds = today.getTime();
 
         switch (filter) {
 
@@ -29,6 +30,7 @@ const Tasks = (props) => {
                 console.log('TODAY filter is runnig');
                 props.taskList.forEach((task) => {
                     debugger
+
                     let taskDate = task.date;
                     let taskYear = +taskDate.slice(0, 4);
                     let taskMonth = +taskDate.slice(5, 7);
@@ -45,17 +47,16 @@ const Tasks = (props) => {
             case 'passed':  {
                 console.log('PASSED filter is runnig');
                 props.taskList.forEach((task) => {
-                    debugger
-                    let taskDate = task.date;
-                    let taskYear = +taskDate.slice(0, 4);
-                    let taskMonth = +taskDate.slice(5, 7);
-                    let taskDay = +taskDate.slice(8, 10);
 
-                    if (todayYear >= taskYear && todayMonth >= taskMonth && todayDay > taskDay) {
-                        debugger
+                    debugger
+                    let taskDate =  new Date(task.date);
+                    let taskMilliseconds = taskDate.getTime();
+                    console.log(taskMilliseconds);
+
+                    if(taskMilliseconds < todayMilliseconds ){
                         filteredTaskList.push(task)
                     }
-                    console.log(filteredTaskList)
+
                 });
                 break
             }
@@ -63,15 +64,14 @@ const Tasks = (props) => {
                 console.log('SCHEDULED filter is runnig');
                 props.taskList.forEach((task)=>{
                     debugger
-                    let taskDate =  task.date;
-                    let taskYear = +taskDate.slice(0,4);
-                    let taskMonth = +taskDate.slice(5,7);
-                    let taskDay = +taskDate.slice(8,10);
 
-                    if(todayYear <= taskYear && todayMonth <= taskMonth && todayDay <= taskDay){
+                    let taskDate =  new Date(task.date);
+                    let taskMilliseconds = taskDate.getTime();
+                    console.log(taskMilliseconds);
+
+                    if(taskMilliseconds > todayMilliseconds ){
                         filteredTaskList.push(task)
                     }
-                    console.log(filteredTaskList)
                 });
                 break
             }
@@ -81,7 +81,7 @@ const Tasks = (props) => {
     if (filter !== 'all' || filter !== false){
         filterFunction(filter.filter_type)
     }
-    debugger
+
     //changeFiltredList([...filtredTaskList]);
     let shownTasks = filter.filter_type !== null ? filteredTaskList : [...props.taskList]; // отображаемые задания
     shownTasks.length = shownCount; // применяем фильтр отображать по 2 задания
