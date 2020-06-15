@@ -67,7 +67,7 @@ const Tasks = (props) => {
                     let taskMonth = +taskDate.slice(5,7);
                     let taskDay = +taskDate.slice(8,10);
 
-                    if(todayYear <= taskYear || todayMonth <= taskMonth || todayDay <= taskDay){
+                    if(todayYear <= taskYear && todayMonth <= taskMonth && todayDay <= taskDay){
                         filteredTaskList.push(task)
                     }
                     console.log(filteredTaskList)
