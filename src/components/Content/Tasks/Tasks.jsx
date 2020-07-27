@@ -13,8 +13,6 @@ const Tasks = (props) => {
     //let [filtredList, changeFiltredList] = useState([]);
     let  [filter, changeFilter] = useState(props.filter);
     const showMore = () =>  shownCount < props.taskList.length ? changeShownCount(shownCount +=2): null; // показать еще заданий
-
-    //let filter = props.filter.filter_type;
     let filteredTaskList = [];
     let filterFunction = (filter) => {
 
@@ -39,7 +37,6 @@ const Tasks = (props) => {
                     if (todayYear === taskYear && todayMonth === taskMonth && todayDay === taskDay) {
                         filteredTaskList.push(task)
                     }
-                    console.log(filteredTaskList)
                 });
 
                 break
@@ -51,7 +48,6 @@ const Tasks = (props) => {
                     debugger
                     let taskDate =  new Date(task.date);
                     let taskMilliseconds = taskDate.getTime();
-                    console.log(taskMilliseconds);
 
                     if(taskMilliseconds < todayMilliseconds ){
                         filteredTaskList.push(task)
@@ -61,13 +57,12 @@ const Tasks = (props) => {
                 break
             }
             case 'scheduled': {
-                console.log('SCHEDULED filter is runnig');
+                console.log('SCHEDULED filter is running');
                 props.taskList.forEach((task)=>{
                     debugger
 
                     let taskDate =  new Date(task.date);
                     let taskMilliseconds = taskDate.getTime();
-                    console.log(taskMilliseconds);
 
                     if(taskMilliseconds > todayMilliseconds ){
                         filteredTaskList.push(task)
@@ -78,15 +73,18 @@ const Tasks = (props) => {
         }
 
     };
-    if (filter !== 'all' || filter !== false){
-        filterFunction(filter.filter_type)
-    }
+    debugger
+    // if (filter.filter_type !== 'all' || filter !== false){
+    //     filterFunction(filter.filter_type)
+    // }
 
-    //changeFiltredList([...filtredTaskList]);
-    let shownTasks = filter.filter_type !== null ? filteredTaskList : [...props.taskList]; // отображаемые задания
+    //changeFilteredList([...filteredTaskList]);
+    // let shownTasks = filter.filter_type !== null || 'all' ? filteredTaskList : [...props.taskList]; // отображаемые задания
+    let shownTasks = [...props.taskList];
     shownTasks.length = shownCount; // применяем фильтр отображать по 2 задания
 
     const secondSpanStyles = `${style.icon_right} + ${style.after}`; //Объеденяю стили
+
     return(
         <div className="content_wrapper">
 
